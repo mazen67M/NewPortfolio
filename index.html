@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP.NET Core Developer Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Particles.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Splash Screen Script - Load First -->
+    <script src="js/splash.js"></script>
+</head>
+<body class="light-mode">
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            <div class="resume-btn-container">
+                <a href="./css/CV Final.pdf" class="btn resume-btn">Resume</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="hero-container">
+                <div class="hero-photo">
+                    <img src="css/images/photo.jpg" alt="Profile Photo">
+                </div>
+        <div class="hero-text">
+            <h1>Mazen Mohsen</h1>
+            <h2>ASP.NET Developer</h2>
+            <p class="tagline">Junior ASP.NET Developer passionate about building scalable and secure web apps using ASP.NET Core & SQL Server</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="./css/CV Final.pdf" class="btn secondary-btn">Download Resume</a>
+                <a href="./css/CV Final.pdf" class="btn primary-btn">Let’s Build Something Amazing Together</a>
+            </div>
+        </div>
+            <div id="particles-js" class="particles-container"></div> <!-- Background -->
+
+
+    </div>
+</section>
+
+
+
+        <!-- Skills Section -->
+<section id="skills" class="section skills-section">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies I work with</p>
+
+        <div class="skills-container">
+            <!-- Backend Skills -->
+            <div class="skill-category">
+                <h3>Back-End</h3>
+                <ul>
+                    <li>C#</li>
+                    <li>ASP.NET Core MVC</li>
+                    <li>ASP.NET Core Web API</li>
+                    <li>Entity Framework Core (Code-First)</li>
+                    <li>LINQ</li>
+                    <li>ASP.NET Identity</li>
+                    <li>JWT Authentication</li>
+                    <li>RESTful API Design</li>
+                    <li>Clean Architecture</li>
+                    <li>SOLID Principles</li>
+                    <li>Dependency Injection (DI)</li>
+                    <li>OOP</li>
+                    <li>Data Structures & Algorithms</li>
+                </ul>
+            </div>
+
+            <!-- Frontend Skills -->
+            <div class="skill-category">
+                <h3>Front-End</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>Bootstrap 5</li>
+                    <li>Ajax</li>
+                </ul>
+            </div>
+
+            <!-- Databases & Tools -->
+            <div class="skill-category">
+                <h3>Databases & Tools</h3>
+                <ul>
+                    <li>Microsoft SQL Server 2022</li>
+                    <li>Redis (Caching)</li>
+                    <li>Postman</li>
+                    <li>Swagger</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>Visual Studio 2022</li>
+                    <li>VS Code</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <p class="section-subtitle">Academic background</p>
+    
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="timeline-date">2022 – 2026</div>
+                    <h3>Bachelor of Computer Science</h3>
+                    <h4>Faculty of Computers and Artificial Intelligence, Beni Suif University</h4>
+                    <p>Focused on Software Engineering, Distributed Database Systems, Web Development, and Computer
+                        Networks.
+                        Gained hands-on experience with ASP.NET Core, SQL Server, Entity Framework, and Java through labs
+                        and projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Experience & Internships Section -->
+<section id="experience" class="section experience-section">
+  <div class="container">
+    <h2 class="section-title">Experience & Internships</h2>
+    <p class="section-subtitle">Professional and training experience</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>ASP.NET Developer Intern</h3>
+          <h4>DEPI Training Program</h4>
+          <p>Developed a shipping company system with real-time tracking and Google Maps integration. Implemented admin/client dashboards with ASP.NET Core and SQL Server.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>Software Developer Intern</h3>
+          <h4>Egyptian Ministry of Communications – Summer Training</h4>
+          <p>Worked on practical projects focusing on ASP.NET Core, SQL Server, and REST APIs. Enhanced skills in backend development and collaborative teamwork.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>Freelance Projects</h3>
+          <p>Built custom solutions including e-commerce platforms, educational platforms, and blog systems using ASP.NET Core MVC & Web API.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+       
+<!-- Projects Section -->
+<section id="projects" class="section projects-section">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Selected works</p>
+        <div class="side-projects-grid">
+            <!-- Side project cards will be added here -->
+        </div>
+    </div>
+</section>
+
+
+        <!-- Side Projects Section -->
+        <!-- <section id="side-projects" class="section side-projects-section">
+            <div class="container">
+                <h2 class="section-title">Side Projects</h2>
+                <p class="section-subtitle">Experiments and personal work</p>
+                <div class="side-projects-grid">
+                </div>
+            </div>
+        </section> -->
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Let's Contact</h2>
+                <p class="section-subtitle">Ready to discuss your next project</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info-wrapper">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:mazen.mohsen.dev@gmail.com">mazen.mohsen.dev@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+201276632422">+20 127 663 2422</a></p>                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Cairo, Egypt</p>
+                                </div>
+                            </div>
+                            
+                            <div class="availability-indicator">
+                                <span class="status-dot available"></span>
+                                <p>Available for freelance projects</p>
+                            </div>
+                            
+                            <h3>Connect With Me</h3>
+                            <div class="social-links">
+                                <a href="https://github.com/mazen67m" target="_blank" class="social-link" aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" class="social-link" aria-label="Twitter Profile">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" class="social-link" aria-label="Facebook Profile">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55210.16050599455!2d31.2243006!3d30.0444196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458410d3edb5d59%3A0x9b3ed3f17be9d65!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1694956000000!5m2!1sen!2seg"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mazen Mohsen. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.config.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/tilt.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/formValidation.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/scrollReveal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
