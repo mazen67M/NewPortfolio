@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASP.NET Core Developer Portfolio</title>
+    <meta name="description"
+        content="Mazen Mohsen - Junior ASP.NET Core Developer portfolio. Experienced in building scalable web applications with C#, SQL Server, Entity Framework, and Clean Architecture.">
+    <meta name="keywords"
+        content="ASP.NET Developer, C# Developer, Web Developer, Egypt, Cairo, Backend Developer, Junior Developer">
+    <meta name="author" content="Mazen Mohsen">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mazen Mohsen - ASP.NET Developer Portfolio">
+    <meta property="og:description"
+        content="Junior ASP.NET Developer passionate about building scalable and secure web apps">
+    <meta property="og:image" content="./css/images/photo.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mazen Mohsen - ASP.NET Developer">
+    <meta name="twitter:description" content="Junior ASP.NET Developer passionate about building scalable web apps">
+    <title>Mazen Mohsen | ASP.NET Core Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/splash.css">
-    <link rel="stylesheet" href="css/cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Devicon for technology icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -29,6 +49,7 @@
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -61,7 +82,7 @@
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary-btn">View Projects</a>
                 <a href="./css/CV Final.pdf" class="btn secondary-btn">Download Resume</a>
-                <a href="./css/CV Final.pdf" class="btn primary-btn">Let’s Build Something Amazing Together</a>
+                <a href="#contact" class="btn primary-btn">Let's Build Something Together</a>
             </div>
         </div>
             <div id="particles-js" class="particles-container"></div> <!-- Background -->
@@ -71,6 +92,46 @@
 </section>
 
 
+<!-- About Me Section -->
+<section id="about" class="section about-section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Get to know me better</p>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate Junior ASP.NET Developer with a strong foundation in building
+                    scalable and secure web applications. Currently pursuing my Bachelor's degree in
+                    Computer Science at Faculty of Computers and Artificial Intelligence, I combine
+                    academic knowledge with hands-on experience from internships and freelance projects.</p>
+
+                <p>My expertise lies in backend development using C#, ASP.NET Core, and SQL Server,
+                    while also being comfortable with frontend technologies. I'm a firm believer in
+                    Clean Architecture and SOLID principles, ensuring my code is maintainable and
+                    production-ready.</p>
+
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-code"></i>
+                        <span>Clean Code Advocate</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>CS Student</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-rocket"></i>
+                        <span>Fast Learner</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-users"></i>
+                        <span>Team Player</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Skills Section -->
 <section id="skills" class="section skills-section">
@@ -78,52 +139,102 @@
         <h2 class="section-title">Skills</h2>
         <p class="section-subtitle">Technologies I work with</p>
 
+        <!-- Primary Skills - Languages & Frameworks -->
+        <div class="skills-primary">
+            <h3 class="skills-group-title"><i class="fas fa-code"></i> Core Technologies</h3>
+            <div class="skills-icons-grid">
+                <div class="skill-icon-card" data-skill="C#">
+                    <i class="devicon-csharp-plain colored"></i>
+                    <span>C#</span>
+                    <div class="skill-level" data-level="90"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="ASP.NET Core">
+                    <i class="devicon-dotnetcore-plain colored"></i>
+                    <span>ASP.NET Core</span>
+                    <div class="skill-level" data-level="85"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="SQL Server">
+                    <i class="devicon-microsoftsqlserver-plain colored"></i>
+                    <span>SQL Server</span>
+                    <div class="skill-level" data-level="80"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="Entity Framework">
+                    <i class="devicon-dot-net-plain colored"></i>
+                    <span>EF Core</span>
+                    <div class="skill-level" data-level="85"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="JavaScript">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>JavaScript</span>
+                    <div class="skill-level" data-level="70"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="HTML5">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML5</span>
+                    <div class="skill-level" data-level="85"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="CSS3">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS3</span>
+                    <div class="skill-level" data-level="80"></div>
+                </div>
+                <div class="skill-icon-card" data-skill="Bootstrap">
+                    <i class="devicon-bootstrap-plain colored"></i>
+                    <span>Bootstrap</span>
+                    <div class="skill-level" data-level="85"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Skills Categories -->
         <div class="skills-container">
             <!-- Backend Skills -->
-            <div class="skill-category">
-                <h3>Back-End</h3>
-                <ul>
-                    <li>C#</li>
-                    <li>ASP.NET Core MVC</li>
-                    <li>ASP.NET Core Web API</li>
-                    <li>Entity Framework Core (Code-First)</li>
-                    <li>LINQ</li>
-                    <li>ASP.NET Identity</li>
-                    <li>JWT Authentication</li>
-                    <li>RESTful API Design</li>
-                    <li>Clean Architecture</li>
-                    <li>SOLID Principles</li>
-                    <li>Dependency Injection (DI)</li>
-                    <li>OOP</li>
-                    <li>Data Structures & Algorithms</li>
+            <div class="skill-category enhanced">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-server"></i></div>
+                    <h3>Back-End Development</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> ASP.NET Core MVC & Web API</li>
+                    <li><i class="fas fa-check-circle"></i> Entity Framework Core (Code-First)</li>
+                    <li><i class="fas fa-check-circle"></i> LINQ & Lambda Expressions</li>
+                    <li><i class="fas fa-check-circle"></i> ASP.NET Identity & JWT Auth</li>
+                    <li><i class="fas fa-check-circle"></i> RESTful API Design</li>
+                    <li><i class="fas fa-check-circle"></i> Clean Architecture & SOLID</li>
+                    <li><i class="fas fa-check-circle"></i> Dependency Injection (DI)</li>
+                    <li><i class="fas fa-check-circle"></i> OOP & Design Patterns</li>
                 </ul>
             </div>
 
             <!-- Frontend Skills -->
-            <div class="skill-category">
-                <h3>Front-End</h3>
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
-                    <li>jQuery</li>
-                    <li>Bootstrap 5</li>
-                    <li>Ajax</li>
+            <div class="skill-category enhanced">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Front-End Development</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> HTML5 & Semantic Markup</li>
+                    <li><i class="fas fa-check-circle"></i> CSS3 & Responsive Design</li>
+                    <li><i class="fas fa-check-circle"></i> JavaScript (ES6+)</li>
+                    <li><i class="fas fa-check-circle"></i> jQuery & Ajax</li>
+                    <li><i class="fas fa-check-circle"></i> Bootstrap 5</li>
+                    <li><i class="fas fa-check-circle"></i> DOM Manipulation</li>
                 </ul>
             </div>
 
             <!-- Databases & Tools -->
-            <div class="skill-category">
-                <h3>Databases & Tools</h3>
-                <ul>
-                    <li>Microsoft SQL Server 2022</li>
-                    <li>Redis (Caching)</li>
-                    <li>Postman</li>
-                    <li>Swagger</li>
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Visual Studio 2022</li>
-                    <li>VS Code</li>
+            <div class="skill-category enhanced">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases & Tools</h3>
+                </div>
+                <ul class="skill-list">
+                    <li><i class="fas fa-check-circle"></i> Microsoft SQL Server 2022</li>
+                    <li><i class="fas fa-check-circle"></i> Redis (Caching)</li>
+                    <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+                    <li><i class="fas fa-check-circle"></i> Postman & Swagger</li>
+                    <li><i class="fas fa-check-circle"></i> Visual Studio 2022</li>
+                    <li><i class="fas fa-check-circle"></i> VS Code</li>
                 </ul>
             </div>
         </div>
@@ -149,6 +260,38 @@
             </div>
         </div>
     </section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="section certifications-section">
+    <div class="container">
+        <h2 class="section-title">Certifications & Training</h2>
+        <p class="section-subtitle">Professional development & courses</p>
+
+        <div class="certifications-grid">
+            <div class="certification-card">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <h3>DEPI Training Program</h3>
+                <p>ASP.NET Core Development - Intensive training program covering web development with .NET ecosystem
+                </p>
+                <span class="cert-date">2024</span>
+            </div>
+
+            <div class="certification-card">
+                <div class="cert-icon"><i class="fas fa-building"></i></div>
+                <h3>Ministry of Communications</h3>
+                <p>Summer Training - Software Development with focus on ASP.NET Core & SQL Server</p>
+                <span class="cert-date">2023</span>
+            </div>
+
+            <div class="certification-card">
+                <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Freelance Experience</h3>
+                <p>Built custom web solutions including e-commerce platforms, blogs, and management systems</p>
+                <span class="cert-date">2023 - Present</span>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     <!-- Experience & Internships Section -->
@@ -256,13 +399,9 @@
                                     <i class="fab fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>
-                                <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" class="social-link" aria-label="Twitter Profile">
-                                    <i class="fab fa-twitter"></i>
-                                    <span>Twitter</span>
-                                </a>
-                                <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" class="social-link" aria-label="Facebook Profile">
-                                    <i class="fab fa-facebook"></i>
-                                    <span>Facebook</span>
+                                <a href="mailto:mazen.mohsen.dev@gmail.com" class="social-link" aria-label="Email">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
                                 </a>
                             </div>
                         </div>

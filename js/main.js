@@ -208,7 +208,7 @@ const sideProjectsData = [
     },
     {
         title: "CozyCorner",
-        description: "Furniture e-commerce website using Django + Bootstrap, supporting cart, wishlist, and admin product management.",
+        description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
         image: "./css/images/4.png",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
