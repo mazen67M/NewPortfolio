@@ -183,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const sideProjectsData = [
     {
+        id: "e-commerce-platform",
         title: "E-Commerce Platform",
         description: "Full-featured ASP.NET Core MVC web app with Clean Architecture principles, payment integration, and admin dashboard.",
         image: "./css/images/1.png",
@@ -191,6 +192,7 @@ const sideProjectsData = [
         demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation"
     },
     {
+        id: "blog-platform",
         title: "Blog Platform",
         description: "Multi-user blogging system with ASP.NET Core MVC, Identity-based authentication, category management, and comments.",
         image: "./css/images/2.png",
@@ -199,6 +201,7 @@ const sideProjectsData = [
         demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9"
     },
     {
+        id: "book-verse",
         title: "Book Verse",
         description: "Library management system built with ASP.NET Core & SQL Server, supporting CRUD operations, user roles, and book reviewing system.",
         image: "./css/images/3.png",
@@ -207,6 +210,7 @@ const sideProjectsData = [
         demoLink: "https://github.com/mazen67M/LibraryManagement-system-API"
     },
     {
+        id: "cozy-corner",
         title: "CozyCorner",
         description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
         image: "./css/images/4.png",
@@ -245,22 +249,31 @@ const labsData = [
 
 // Function to create project cards
 function createProjectCard(project) {
+    const hasDetailPage = project.id ? true : false;
+    const detailsLink = hasDetailPage ? `./projects/index.html?id=${project.id}` : project.githubLink;
+
     return `
-        <div class="project-card">
+        <div class="project-card" ${hasDetailPage ? `onclick="window.location.href='${detailsLink}'"` : ''}>
             <img src="${project.image}" alt="${project.title}" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="tech-stack">
-                    ${project.techStack.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    ${project.techStack.slice(0, 4).map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    ${project.techStack.length > 4 ? `<span class="tech-tag more-tag">+${project.techStack.length - 4} more</span>` : ''}
                 </div>
                 <div class="project-links">
-                    <a href="${project.githubLink}" class="project-link github-link" target="_blank">
+                    <a href="${project.githubLink}" class="project-link github-link" target="_blank" onclick="event.stopPropagation()">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="${project.demoLink}" class="project-link demo-link" target="_blank">
+                    <a href="${project.demoLink}" class="project-link demo-link" target="_blank" onclick="event.stopPropagation()">
                         <i class="fas fa-external-link-alt"></i> Demo
                     </a>
+                    ${hasDetailPage ? `
+                        <a href="${detailsLink}" class="project-link details-link" onclick="event.stopPropagation()">
+                            <i class="fas fa-arrow-right"></i> Details
+                        </a>
+                    ` : ''}
                 </div>
             </div>
         </div>

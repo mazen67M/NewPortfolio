@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Details - Mazen Mohsen Portfolio">
+    <meta name="author" content="Mazen Mohsen">
+    <meta name="robots" content="index, follow">
+    
+    <title>Project Details | Mazen Mohsen</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body class="light-mode">
+    <div class="theme-toggle-wrapper">
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#hero">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="resume-btn-container">
+                <a href="../css/CV Final.pdf" class="btn resume-btn">Resume</a>
+            </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="project-detail-main">
+        <!-- Breadcrumb Navigation -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <a href="../index.html#projects">Projects</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current" id="breadcrumb-title">Project Name</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Project Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <div class="project-hero-content">
+                    <div class="project-hero-text">
+                        <span class="project-category" id="project-category">Web Application</span>
+                        <h1 class="project-title" id="project-title">Project Title</h1>
+                        <p class="project-summary" id="project-summary">
+                            Project summary goes here...
+                        </p>
+                        <div class="project-actions">
+                            <a href="#" class="btn primary-btn" id="live-demo-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="btn secondary-btn" id="github-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-hero-image">
+                        <div class="project-mockup">
+                            <img src="" alt="Project Screenshot" id="project-main-image">
+                            <div class="image-overlay">
+                                <button class="expand-btn" id="expand-image-btn">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Details Grid -->
+        <section class="project-details-section">
+            <div class="container">
+                <div class="project-details-grid">
+                    <!-- Main Content -->
+                    <div class="project-main-content">
+                        <!-- Overview -->
+                        <div class="content-block">
+                            <h2><i class="fas fa-info-circle"></i> Overview</h2>
+                            <div class="overview-content" id="project-overview">
+                                <p>Project overview content goes here...</p>
+                            </div>
+                        </div>
+
+                        <!-- Features -->
+                        <div class="content-block">
+                            <h2><i class="fas fa-star"></i> Key Features</h2>
+                            <ul class="features-list" id="project-features">
+                                <!-- Features will be populated dynamically -->
+                            </ul>
+                        </div>
+
+                        <!-- Code Snippets -->
+                        <div class="content-block">
+                            <h2><i class="fas fa-code"></i> Code Highlights</h2>
+                            <div class="code-snippets" id="project-code-snippets">
+                                <!-- Code snippets will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Project Gallery -->
+                        <div class="content-block">
+                            <h2><i class="fas fa-images"></i> Project Gallery</h2>
+                            <div class="gallery-grid" id="project-gallery">
+                                <!-- Gallery images will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Challenges & Solutions -->
+                        <div class="content-block">
+                            <h2><i class="fas fa-lightbulb"></i> Challenges & Solutions</h2>
+                            <div class="challenges-content" id="project-challenges">
+                                <!-- Challenges will be populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="project-sidebar">
+                        <!-- Tech Stack -->
+                        <div class="sidebar-block tech-stack-block">
+                            <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+                            <div class="tech-stack-grid" id="project-tech-stack">
+                                <!-- Tech stack will be populated dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Project Info -->
+                        <div class="sidebar-block project-info-block">
+                            <h3><i class="fas fa-info"></i> Project Info</h3>
+                            <ul class="project-info-list">
+                                <li>
+                                    <span class="info-label"><i class="fas fa-calendar"></i> Date</span>
+                                    <span class="info-value" id="project-date">2024</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-user"></i> Role</span>
+                                    <span class="info-value" id="project-role">Full Stack Developer</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-clock"></i> Duration</span>
+                                    <span class="info-value" id="project-duration">3 months</span>
+                                </li>
+                                <li>
+                                    <span class="info-label"><i class="fas fa-users"></i> Team Size</span>
+                                    <span class="info-value" id="project-team">Solo</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="sidebar-block quick-links-block">
+                            <h3><i class="fas fa-link"></i> Quick Links</h3>
+                            <div class="quick-links" id="project-links">
+                                <!-- Links will be populated dynamically -->
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Projects -->
+        <section class="related-projects-section">
+            <div class="container">
+                <h2 class="section-title">Related Projects</h2>
+                <p class="section-subtitle">Check out more of my work</p>
+                <div class="related-projects-grid" id="related-projects">
+                    <!-- Related projects will be populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="project-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Interested in working together?</h2>
+                    <p>Let's discuss your next project and bring your ideas to life.</p>
+                    <a href="../index.html#contact" class="btn primary-btn">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="image-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="Full size image" id="modal-image">
+            <div class="modal-navigation">
+                <button class="modal-nav-btn prev" id="modal-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="modal-nav-btn next" id="modal-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="modal-counter" id="modal-counter">1 / 4</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Mazen Mohsen. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../index.html#hero">Home</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../index.html#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+    <script src="../js/darkMode.js"></script>
+    <script src="../js/projects-data.js"></script>
+    <script src="../js/project-detail.js"></script>
+</body>
+</html>

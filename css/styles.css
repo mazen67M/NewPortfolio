@@ -1517,6 +1517,29 @@ body.dark-mode .tech-tag {
     transform: translateY(-2px);
 }
 
+.details-link {
+    background: var(--gradient-1);
+    color: white;
+}
+
+.details-link:hover {
+    box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
+}
+
+.more-tag {
+    background: var(--gradient-1) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+.project-card[onclick] {
+    cursor: pointer;
+}
+
+.project-card[onclick]:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(13, 202, 240, 0.15);
+}
 /* Contact Section */
 .contact-section {
     text-align: center;
