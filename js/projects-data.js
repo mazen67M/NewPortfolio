@@ -133,7 +133,7 @@ const projectsDetailData = {
         title: "Blog Platform",
         category: "Content Management System",
         summary: "A multi-user blogging system with ASP.NET Core MVC featuring Identity-based authentication, rich text editing, category management, and comprehensive commenting system.",
-        mainImage: "../css/images/Blog/blog1.png",
+        mainImage: "../css/images/Blog/Slider.jpeg",
         githubLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
         demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
         date: "2024",
@@ -141,8 +141,42 @@ const projectsDetailData = {
         duration: "2 months",
         team: "Solo Project",
         overview: `
-            <p>This Blog Platform is a robust content management system built with ASP.NET Core MVC and .NET 9. It provides a complete blogging solution with user authentication, post management, and interactive features like comments and categories.</p>
-            <p>The platform supports multiple user roles including Authors, Editors, and Administrators, each with specific permissions. It features a modern, responsive design with a rich text editor for creating engaging content.</p>
+            <p>Blogify is a next-generation blogging platform engineered with ASP.NET Core MVC (.NET 9). It combines enterprise-grade security with a visually stunning, glassmorphism-inspired dark UI. This project demonstrates a full-stack approach to building scalable web applications, featuring complex role-based authorization, a complete admin dashboard, and rich content management capabilities.
+
+🌟 Key Highlights
+Modern Tech Stack: Built on the latest .NET 9 runtime for maximum performance.
+
+Premium UI/UX: A fully custom Dark Theme featuring glassmorphism cards, gradient accents and smooth micro-animations.
+</br>
+
+<br>
+Advanced Security: Implements ASP.NET Core Identity with a unique Account Approval Workflow—new users must be vetted by an Admin before accessing the system.
+</br>
+
+<br>
+Three-Tier Roles: Granular access control for Admins (Dashboard/User Mgmt), Authors (Content Creation), and Users (Comments/Read).
+</br>
+
+<br>
+🛠 Technical Architecture
+Backend: ASP.NET Core MVC, C#, Entity Framework Core, SQL Server.
+</br>
+
+<br>
+Frontend: Bootstrap 5, Custom CSS3 (Variables & Animations), jQuery, AJAX.
+</br>
+
+<br>
+Patterns: MVC Architecture, Dependency Injection, Async/Await operations, ViewModel separation.
+</br>
+
+<br>
+Security: CSRF Protection, SQL Injection prevention, File Upload Validation.
+</br>
+
+<br>
+📊 Admin Dashboard
+A centralized hub for administrators to view real-time statistics, approve pending user accounts, manage categories, and oversee all platform activity.</p>
         `,
         features: [
             { icon: "fas fa-user-lock", text: "ASP.NET Identity authentication with role-based access" },
@@ -152,7 +186,6 @@ const projectsDetailData = {
             { icon: "fas fa-user-edit", text: "Author profiles and bio pages" },
             { icon: "fas fa-image", text: "Image upload and management" },
             { icon: "fas fa-search", text: "Full-text search functionality" },
-            { icon: "fas fa-rss", text: "RSS feed support" }
         ],
         techStack: [
             { name: "ASP.NET Core MVC", icon: "devicon-dotnetcore-plain" },
@@ -160,7 +193,12 @@ const projectsDetailData = {
             { name: "Entity Framework Core", icon: "devicon-dot-net-plain" },
             { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain" },
             { name: "ASP.NET Identity", icon: "fas fa-shield-alt" },
-            { name: "Bootstrap 5", icon: "devicon-bootstrap-plain" }
+            { name: "Bootstrap 5", icon: "devicon-bootstrap-plain" },
+            { name: "jQuery", icon: "devicon-jquery-plain" },
+            { name: "AJAX", icon: "devicon-ajax-plain" },
+            { name: "JS", icon: "devicon-javascript-plain" }
+
+
         ],
         codeSnippets: [
             {
@@ -204,9 +242,26 @@ const projectsDetailData = {
             }
         ],
         gallery: [
-            { image: "../css/images/Blog/blog1.png", caption: "Blog Home" },
-            { image: "../css/images/Blog/blog2.png", caption: "Post Editor" },
-            { image: "../css/images/Blog/blog3.png", caption: "User Dashboard" }
+            { image: "../css/images/Blog/home.jpeg", caption: "Blog Home" },
+            { image: "../css/images/Blog/Login.jpeg", caption: "Login Page" },
+            { image: "../css/images/Blog/register.jpeg", caption: "Register Page" },
+            { image: "../css/images/Blog/Approve.jpeg", caption: "Approve Page" },
+            { image: "../css/images/Blog/AuthorLogin.jpeg", caption: "Author Login Page" },
+            { image: "../css/images/Blog/AuthorPostView.jpeg", caption: "Author Post View Page" },
+            { image: "../css/images/Blog/postDetails.jpeg", caption: "Post Details Page" },
+
+            { image: "../css/images/Blog/AdminView.jpeg", caption: "Admin View Page" },
+            { image: "../css/images/Blog/AdminDashboard.jpeg", caption: "Admin Dashboard Page" },
+            { image: "../css/images/Blog/ManageUsers.jpeg", caption: "Manage Users Page" },
+            { image: "../css/images/Blog/CategoriesManagement.jpeg", caption: "Categories Management Page" },
+            { image: "../css/images/Blog/UserOptions.jpeg", caption: "User Options Page" },
+            { image: "../css/images/Blog/UserProfile.jpeg", caption: "User Profile Page" },
+            { image: "../css/images/Blog/AddNewComment.jpeg", caption: "Add Comment Page" },
+            { image: "../css/images/Blog/Comments.jpeg", caption: "Comments Page" },
+
+
+
+
         ],
         challenges: [
             {
