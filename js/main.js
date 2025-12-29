@@ -186,7 +186,7 @@ const sideProjectsData = [
         id: "e-commerce-platform",
         title: "E-Commerce Platform",
         description: "Full-featured ASP.NET Core MVC web app with Clean Architecture principles, payment integration, and admin dashboard.",
-        image: "./css/images/1.png",
+        image: "./css/images/Ecommerce/Home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis"],
         githubLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
         demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation"
@@ -213,7 +213,25 @@ const sideProjectsData = [
         id: "cozy-corner",
         title: "CozyCorner",
         description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
-        image: "./css/images/4.png",
+        image: "./css/images/CozyCorner/Home.jpg",
+        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
+        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners"
+    },
+     {
+        id: "ARTifactify",
+        title: "ARTifactify",
+        description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
+        image: "./css/images/CozyCorner/Home.jpg",
+        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
+        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners"
+    },
+     {
+        id: "SuperMarketSystem",
+        title: "SuperMarketSystem",
+        description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
+        image: "./css/images/CozyCorner/Home.jpg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
         demoLink: "https://github.com/ArwaAlaa1/CozyCorners"

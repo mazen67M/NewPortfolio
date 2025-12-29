@@ -666,6 +666,7 @@ body.dark-mode .timeline-dot {
     font-weight: 700;
     background: var(--gradient-2);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .timeline-content {
@@ -976,6 +977,17 @@ body.dark-mode .certification-card {
     -webkit-text-fill-color: transparent;
 }
 
+.cert-icon img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    transition: transform 0.3s ease;
+}
+
+.certification-card:hover .cert-icon img {
+    transform: scale(1.1);
+}
 .certification-card h3 {
     font-size: 1.2rem;
     margin-bottom: var(--spacing-xs);
@@ -1003,6 +1015,34 @@ body.dark-mode .certification-card h3 {
     font-weight: 600;
 }
 
+.cert-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent-light);
+    border-radius: var(--radius-md);
+    color: var(--accent-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .cert-link {
+    border-color: var(--accent-dark);
+    color: var(--accent-dark);
+}
+
+.cert-link:hover {
+    background: var(--accent-light);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(13, 202, 240, 0.2);
+}
+
+body.dark-mode .cert-link:hover {
+    background: var(--accent-dark);
+}
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

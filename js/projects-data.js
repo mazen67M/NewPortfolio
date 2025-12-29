@@ -8,7 +8,7 @@ const projectsDetailData = {
         title: "E-Commerce Platform",
         category: "Full Stack Web Application",
         summary: "A full-featured ASP.NET Core MVC web application with Clean Architecture principles, payment integration, recommendation system, and comprehensive admin dashboard.",
-        mainImage: "../css/images/Ecommerce/1.png",
+        mainImage: "../css/images/Ecommerce/Home.jpeg",
         githubLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
         demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
         date: "2024",
@@ -103,10 +103,35 @@ const projectsDetailData = {
             }
         ],
         gallery: [
-            { image: "../css/images/Ecommerce/1.png", caption: "Home Page" },
-            { image: "../css/images/Ecommerce/1.png", caption: "Product Listing" },
-            { image: "../css/images/Ecommerce/1.png", caption: "Shopping Cart" },
-            { image: "../css/images/Ecommerce/1.png", caption: "Admin Dashboard" }
+            { image: "../css/images/Ecommerce/Home.jpeg", caption: "Home Page" },
+            { image: "../css/images/Ecommerce/Login.jpeg", caption: "Login Page" },
+            { image: "../css/images/Ecommerce/Register.jpeg", caption: "Register Page" },
+            { image: "../css/images/Ecommerce/EmailConfirm.jpeg", caption: "Email Confirmation Page" },
+            { image: "../css/images/Ecommerce/ResetPassword.jpeg", caption: "Reset Password Page" },
+            { image: "../css/images/Ecommerce/Home2.jpeg", caption: "Home 2Page" },
+            { image: "../css/images/Ecommerce/Navbar.jpeg", caption: "Navbar" },
+            { image: "../css/images/Ecommerce/Navbar2.jpeg", caption: "Navbar" },
+            { image: "../css/images/Ecommerce/Shop.jpeg", caption: "Shop Page" },
+            { image: "../css/images/Ecommerce/ProductDetails.png", caption: "Product Details Page" },
+            { image: "../css/images/Ecommerce/FeaturedProducts.jpeg", caption: "Featured Products Page" },
+            { image: "../css/images/Ecommerce/LatestArrival.jpeg", caption: "Last Arrival Page" },
+            { image: "../css/images/Ecommerce/FAQ.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/Cart.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/Wishlist.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/UserOptions.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/Shipping.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/AdminDashboard.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/ProductManagement.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/ProductManagement2.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/CategoryManagement.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/BrandManagement.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/SalesReports.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/CategoryManagement.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/ManageProfile.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/UpdateProfile.jpeg", caption: "FAQ Page" },
+            { image: "../css/images/Ecommerce/2FactorAuth.jpeg", caption: "FAQ Page" },
+
+
         ],
         challenges: [
             {
@@ -509,7 +534,212 @@ A centralized hub for administrators to view real-time statistics, approve pendi
         links: [
             { icon: "fab fa-github", text: "View Source Code", url: "https://github.com/ArwaAlaa1/CozyCorners" }
         ]
+    },
+    "ARTifactify": {
+        id: "ARTifactify",
+        title: "ARTifactify",
+        category: "E-Commerce Platform",
+        summary: "A furniture e-commerce website using ASP.NET Core MVC with Bootstrap, featuring shopping cart, wishlist functionality, and comprehensive admin product management system.",
+        mainImage: "../css/images/Ecommerce/Login.jpeg",
+        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        date: "2024",
+        role: "Backend Developer",
+        duration: "3 months",
+        team: "2 Developers",
+        overview: `
+            <p>ARTifactify is a modern furniture e-commerce platform designed to provide customers with a seamless online shopping experience for home furniture and decor. Built with ASP.NET Core MVC, the application features a clean, responsive design that showcases products beautifully.</p>
+            <p>The platform includes essential e-commerce features like shopping cart, wishlist, user accounts, and a comprehensive admin panel for managing products, orders, and inventory. It implements Clean Architecture principles for maintainability and scalability.</p>
+        `,
+        features: [
+            { icon: "fas fa-couch", text: "Beautiful product showcase with categories" },
+            { icon: "fas fa-shopping-cart", text: "Fully functional shopping cart" },
+            { icon: "fas fa-heart", text: "Wishlist for saving favorite items" },
+            { icon: "fas fa-user", text: "User account management" },
+            { icon: "fas fa-cogs", text: "Admin product management panel" },
+            { icon: "fas fa-boxes", text: "Inventory tracking system" },
+            { icon: "fas fa-filter", text: "Product filtering and sorting" },
+            { icon: "fas fa-mobile-alt", text: "Responsive design for all devices" },
+            { icon: "fas fa-bolt", text: "Redis caching for performance" },
+            { icon: "fas fa-plug", text: "RESTful API endpoints" }
+        ],
+        techStack: [
+            { name: "ASP.NET Core MVC", icon: "devicon-dotnetcore-plain" },
+            { name: "C#", icon: "devicon-csharp-plain" },
+            { name: "Entity Framework Core", icon: "devicon-dot-net-plain" },
+            { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain" },
+            { name: "Clean Architecture", icon: "fas fa-layer-group" },
+            { name: "Bootstrap 5", icon: "devicon-bootstrap-plain" },
+            { name: "JavaScript", icon: "devicon-javascript-plain" },
+            { name: "Redis", icon: "devicon-redis-plain" },
+            { name: "ASP.NET Web API", icon: "fas fa-plug" }
+        ],
+        codeSnippets: [
+            {
+                title: "Shopping Cart Service",
+                language: "csharp",
+                code: `public class CartService : ICartService
+{
+    private readonly ICartRepository _cartRepository;
+    private readonly IProductRepository _productRepository;
+    private readonly ICacheService _cacheService;
+
+    public async Task<CartDto> AddToCartAsync(int productId, int quantity, string userId)
+    {
+        var product = await _productRepository.GetByIdAsync(productId);
+        
+        if (product == null || product.Stock < quantity)
+            throw new InvalidOperationException("Product unavailable");
+
+        var cart = await GetOrCreateCartAsync(userId);
+        
+        var existingItem = cart.Items
+            .FirstOrDefault(i => i.ProductId == productId);
+
+        if (existingItem != null)
+        {
+            existingItem.Quantity += quantity;
+        }
+        else
+        {
+            cart.Items.Add(new CartItem
+            {
+                ProductId = productId,
+                Quantity = quantity,
+                Price = product.Price
+            });
+        }
+
+        await _cartRepository.UpdateAsync(cart);
+        await _cacheService.InvalidateAsync($"cart_{userId}");
+        
+        return MapToDto(cart);
     }
+}`
+            }
+        ],
+        gallery: [
+            { image: "../css/images/4.png", caption: "Homepage" },
+            { image: "../css/images/4.png", caption: "Product Catalog" },
+            { image: "../css/images/4.png", caption: "Shopping Cart" }
+        ],
+        challenges: [
+            {
+                challenge: "Optimizing performance for large product catalogs",
+                solution: "Implemented Redis caching for frequently accessed data and pagination with lazy loading for product listings."
+            },
+            {
+                challenge: "Coordinating development between team members",
+                solution: "Used Git branching strategy with feature branches and pull requests, along with clear API contracts for frontend-backend integration."
+            }
+        ],
+        links: [
+            { icon: "fab fa-github", text: "View Source Code", url: "https://github.com/ArwaAlaa1/CozyCorners" }
+        ]
+    },
+    "SuperMarketSystem": {
+        id: "SuperMarketSystem",
+        title: "SuperMarketSystem",
+        category: "E-Commerce Platform",
+        summary: "A furniture e-commerce website using ASP.NET Core MVC with Bootstrap, featuring shopping cart, wishlist functionality, and comprehensive admin product management system.",
+        mainImage: "../css/images/4.png",
+        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        date: "2024",
+        role: "Backend Developer",
+        duration: "3 months",
+        team: "2 Developers",
+        overview: `
+            <p>CozyCorner is a modern furniture e-commerce platform designed to provide customers with a seamless online shopping experience for home furniture and decor. Built with ASP.NET Core MVC, the application features a clean, responsive design that showcases products beautifully.</p>
+            <p>The platform includes essential e-commerce features like shopping cart, wishlist, user accounts, and a comprehensive admin panel for managing products, orders, and inventory. It implements Clean Architecture principles for maintainability and scalability.</p>
+        `,
+        features: [
+            { icon: "fas fa-couch", text: "Beautiful product showcase with categories" },
+            { icon: "fas fa-shopping-cart", text: "Fully functional shopping cart" },
+            { icon: "fas fa-heart", text: "Wishlist for saving favorite items" },
+            { icon: "fas fa-user", text: "User account management" },
+            { icon: "fas fa-cogs", text: "Admin product management panel" },
+            { icon: "fas fa-boxes", text: "Inventory tracking system" },
+            { icon: "fas fa-filter", text: "Product filtering and sorting" },
+            { icon: "fas fa-mobile-alt", text: "Responsive design for all devices" },
+            { icon: "fas fa-bolt", text: "Redis caching for performance" },
+            { icon: "fas fa-plug", text: "RESTful API endpoints" }
+        ],
+        techStack: [
+            { name: "ASP.NET Core MVC", icon: "devicon-dotnetcore-plain" },
+            { name: "C#", icon: "devicon-csharp-plain" },
+            { name: "Entity Framework Core", icon: "devicon-dot-net-plain" },
+            { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain" },
+            { name: "Clean Architecture", icon: "fas fa-layer-group" },
+            { name: "Bootstrap 5", icon: "devicon-bootstrap-plain" },
+            { name: "JavaScript", icon: "devicon-javascript-plain" },
+            { name: "Redis", icon: "devicon-redis-plain" },
+            { name: "ASP.NET Web API", icon: "fas fa-plug" }
+        ],
+        codeSnippets: [
+            {
+                title: "Shopping Cart Service",
+                language: "csharp",
+                code: `public class CartService : ICartService
+{
+    private readonly ICartRepository _cartRepository;
+    private readonly IProductRepository _productRepository;
+    private readonly ICacheService _cacheService;
+
+    public async Task<CartDto> AddToCartAsync(int productId, int quantity, string userId)
+    {
+        var product = await _productRepository.GetByIdAsync(productId);
+        
+        if (product == null || product.Stock < quantity)
+            throw new InvalidOperationException("Product unavailable");
+
+        var cart = await GetOrCreateCartAsync(userId);
+        
+        var existingItem = cart.Items
+            .FirstOrDefault(i => i.ProductId == productId);
+
+        if (existingItem != null)
+        {
+            existingItem.Quantity += quantity;
+        }
+        else
+        {
+            cart.Items.Add(new CartItem
+            {
+                ProductId = productId,
+                Quantity = quantity,
+                Price = product.Price
+            });
+        }
+
+        await _cartRepository.UpdateAsync(cart);
+        await _cacheService.InvalidateAsync($"cart_{userId}");
+        
+        return MapToDto(cart);
+    }
+}`
+            }
+        ],
+        gallery: [
+            { image: "../css/images/4.png", caption: "Homepage" },
+            { image: "../css/images/4.png", caption: "Product Catalog" },
+            { image: "../css/images/4.png", caption: "Shopping Cart" }
+        ],
+        challenges: [
+            {
+                challenge: "Optimizing performance for large product catalogs",
+                solution: "Implemented Redis caching for frequently accessed data and pagination with lazy loading for product listings."
+            },
+            {
+                challenge: "Coordinating development between team members",
+                solution: "Used Git branching strategy with feature branches and pull requests, along with clear API contracts for frontend-backend integration."
+            }
+        ],
+        links: [
+            { icon: "fab fa-github", text: "View Source Code", url: "https://github.com/ArwaAlaa1/CozyCorners" }
+        ]
+    }
+    
 };
 
 // Function to get project by ID
