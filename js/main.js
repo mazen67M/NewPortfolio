@@ -195,7 +195,7 @@ const sideProjectsData = [
         id: "blog-platform",
         title: "Blog Platform",
         description: "Multi-user blogging system with ASP.NET Core MVC, Identity-based authentication, category management, and comments.",
-        image: "./css/images/Blog/slider.jpeg",
+        image: "./css/images/Blog/home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "ASP.NET Identity", "Bootstrap"],
         githubLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
         demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9"
