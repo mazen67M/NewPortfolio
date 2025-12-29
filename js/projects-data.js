@@ -158,7 +158,7 @@ const projectsDetailData = {
         title: "Blog Platform",
         category: "Content Management System",
         summary: "A multi-user blogging system with ASP.NET Core MVC featuring Identity-based authentication, rich text editing, category management, and comprehensive commenting system.",
-        mainImage: "../css/images/Blog/Slider.jpeg",
+        mainImage: "../css/images/Blog/home.jpeg",
         githubLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
         demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
         date: "2024",
