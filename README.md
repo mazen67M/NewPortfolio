@@ -4,7 +4,7 @@ A modern, responsive portfolio website with dark/light mode, animations, and int
 
 ![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
 
-## Features
+## Features 
 
 - **Responsive Design**: Works on all devices and screen sizes
 - **Dark/Light Mode**: Toggle between themes with smooth animations
