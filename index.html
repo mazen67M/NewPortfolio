@@ -76,7 +76,7 @@
                     <img src="css/images/photo.jpg" alt="Profile Photo">
                 </div>
         <div class="hero-text">
-            <h1>Mazen Mohsen</h1>
+            <h1 class="typing-text">Mazen Mohsen</h1>
             <h2>ASP.NET Developer</h2>
             <p class="tagline">Junior ASP.NET Developer passionate about building scalable and secure web apps using ASP.NET Core & SQL Server</p>
             <div class="cta-buttons">
@@ -84,11 +84,18 @@
                 <a href="./css/CV Final.pdf" class="btn secondary-btn">Download Resume</a>
                 <a href="#contact" class="btn primary-btn">Let's Build Something Together</a>
             </div>
+            <a href="#about" class="scroll-indicator">
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrows">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </a>
         </div>
-            <div id="particles-js" class="particles-container"></div> <!-- Background -->
-
-
-    </div>
+        <div id="particles-js" class="particles-container"></div> <!-- Background -->
 </section>
 
 
@@ -344,7 +351,20 @@
     <div class="container">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">Selected works</p>
-        <div class="side-projects-grid">
+        
+        <!-- Project Filter Bar -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="websites">Websites</button>
+            <button class="filter-btn" data-filter="desktop">Desktop</button>
+            <button class="filter-btn" data-filter="apis">APIs</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="projects-grid-container">
+            <div class="side-projects-grid" id="projects-grid-main">
+                <!-- Projects will be dynamically generated here -->
+            </div>
         </div>
     </div>
 </section>
@@ -438,7 +458,6 @@
     <script src="js/darkMode.js"></script>
     <script src="js/tilt.js"></script>
     <script src="js/carousel.js"></script>
-    <script src="js/formValidation.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/scrollReveal.js"></script>
     <script src="js/main.js"></script>

@@ -48,11 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add animation classes to elements when they come into view
     const animateOnScroll = function() {
+        const windowHeight = window.innerHeight;
         const elements = document.querySelectorAll('.project-card, .section-title, .contact-card');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
             
             if (elementPosition < windowHeight - 100) {
                 element.classList.add('animate');
@@ -117,69 +117,6 @@ const projectsData = [
     }
 ];
 
-// Function to create project cards with tilt effect
-function createProjectCards() {
-    const projectsGrid = document.querySelector('.projects-grid');
-    const sideProjectsGrid = document.querySelector('.side-projects-grid');
-    const labsGrid = document.querySelector('.labs-grid');
-    
-    // Clear existing content
-    if (projectsGrid) projectsGrid.innerHTML = '';
-    if (sideProjectsGrid) sideProjectsGrid.innerHTML = '';
-    if (labsGrid) labsGrid.innerHTML = '';
-    
-    // Create project cards
-    projectsData.forEach(project => {
-        if (projectsGrid) {
-            projectsGrid.appendChild(createProjectCard(project));
-        }
-    });
-    
-    // Create side project cards
-    sideProjectsData.forEach(project => {
-        if (sideProjectsGrid) {
-            sideProjectsGrid.appendChild(createProjectCard(project));
-        }
-    });
-    
-    // Create labs cards
-    labsData.forEach(project => {
-        if (labsGrid) {
-            labsGrid.appendChild(createProjectCard(project));
-        }
-    });
-}
-
-// Function to create a single project card
-function createProjectCard(project) {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-    
-    // Create card content
-    card.innerHTML = `
-        <div class="project-image">
-            <img src="${project.image}" alt="${project.title}">
-        </div>
-        <div class="project-content">
-            <h3>${project.title}</h3>
-            <p>${project.description}</p>
-            <div class="project-tech">
-                ${project.techStack.map(tech => `<span>${tech}</span>`).join('')}
-            </div>
-            <div class="project-links">
-                <a href="${project.githubLink}" class="btn small-btn" target="_blank">GitHub</a>
-                <a href="${project.demoLink}" class="btn small-btn primary-btn" target="_blank">Demo</a>
-            </div>
-        </div>
-    `;
-    
-    return card;
-}
-
-// Call the function to create cards when the page loads
-document.addEventListener('DOMContentLoaded', function() {
-    createProjectCards();
-});
 
 const sideProjectsData = [
     {
@@ -189,7 +126,8 @@ const sideProjectsData = [
         image: "./css/images/Ecommerce/Home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis"],
         githubLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
-        demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation"
+        demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
+        categories: ["websites", "other"]
     },
     {
         id: "blog-platform",
@@ -198,7 +136,8 @@ const sideProjectsData = [
         image: "./css/images/Blog/home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "ASP.NET Identity", "Bootstrap"],
         githubLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
-        demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9"
+        demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
+        categories: ["websites"]
     },
     {
         id: "book-verse",
@@ -207,7 +146,8 @@ const sideProjectsData = [
         image: "./css/images/3.png",
         techStack: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server", "LINQ","ASP.NET WEB API", "JWT", "Google SMTP"],
         githubLink: "https://github.com/mazen67M/LibraryManagement-system-API",
-        demoLink: "https://github.com/mazen67M/LibraryManagement-system-API"
+        demoLink: "https://github.com/mazen67M/LibraryManagement-system-API",
+        categories: ["apis"]
     },
     {
         id: "cozy-corner",
@@ -216,7 +156,8 @@ const sideProjectsData = [
         image: "./css/images/CozyCorner/Home.jpg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners"
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        categories: ["websites"]
     },
      {
         id: "ARTifactify",
@@ -225,7 +166,8 @@ const sideProjectsData = [
         image: "./css/images/CozyCorner/Home.jpg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners"
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        categories: ["websites"]
     },
      {
         id: "SuperMarketSystem",
@@ -234,7 +176,8 @@ const sideProjectsData = [
         image: "./css/images/CozyCorner/Home.jpg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners"
+        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        categories: ["desktop", "websites"]
     }
 ];
 
@@ -245,7 +188,8 @@ const labsData = [
         image: "https://via.placeholder.com/600x400",
         techStack: ["ASP.NET Core", "Identity", "JWT", "OAuth"],
         githubLink: "#",
-        demoLink: "#"
+        demoLink: "#",
+        categories: ["other"]
     },
     {
         title: "Microservices Example",
@@ -253,7 +197,8 @@ const labsData = [
         image: "https://via.placeholder.com/600x400",
         techStack: ["ASP.NET Core", "Docker", "RabbitMQ", "gRPC"],
         githubLink: "#",
-        demoLink: "#"
+        demoLink: "#",
+        categories: ["apis"]
     },
     {
         title: "GraphQL API",
@@ -261,7 +206,8 @@ const labsData = [
         image: "https://via.placeholder.com/600x400",
         techStack: ["ASP.NET Core", "GraphQL", "Entity Framework"],
         githubLink: "#",
-        demoLink: "#"
+        demoLink: "#",
+        categories: ["apis"]
     }
 ];
 
@@ -269,9 +215,14 @@ const labsData = [
 function createProjectCard(project) {
     const hasDetailPage = project.id ? true : false;
     const detailsLink = hasDetailPage ? `./projects/index.html?id=${project.id}` : project.githubLink;
+    
+    const categoriesStr = project.categories ? project.categories.join(' ') : 'other';
 
     return `
-        <div class="project-card" ${hasDetailPage ? `onclick="window.location.href='${detailsLink}'"` : ''}>
+        <div class="project-card project-item" data-categories="${categoriesStr}" ${hasDetailPage ? `onclick="window.location.href='${detailsLink}'"` : ''}>
+            <div class="project-categories-overlay">
+                ${project.categories ? project.categories.map(cat => `<span class="cat-tag">${cat.charAt(0).toUpperCase() + cat.slice(1)}</span>`).join('') : ''}
+            </div>
             <img src="${project.image}" alt="${project.title}" class="project-image">
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
@@ -316,6 +267,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const labsGrid = document.querySelector('.labs-grid');
     if (labsGrid) {
         labsGrid.innerHTML = labsData.map(project => createProjectCard(project)).join('');
+    }
+
+    // Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    if (filterBtns.length > 0 && projectItems.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter').toLowerCase();
+
+                projectItems.forEach(item => {
+                    const categories = item.getAttribute('data-categories').toLowerCase().split(' ');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        item.classList.remove('hide');
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.classList.add('hide');
+                        }, 300); // Should match CSS transition duration
+                    }
+                });
+            });
+        });
     }
 
     const items = document.querySelectorAll(".timeline-item");

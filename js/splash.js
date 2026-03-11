@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Enable scrolling on body
                 document.body.style.overflow = 'auto';
             }, 500);
-        }, 3000); // Show splash for 3 seconds
+        }, 1200); // Show splash for a shorter time
     });
 });
 
