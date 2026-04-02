@@ -744,6 +744,83 @@ A centralized hub for administrators to view real-time statistics, approve pendi
         links: [
             { icon: "fab fa-github", text: "View Source Code", url: "https://github.com/ArwaAlaa1/CozyCorners" }
         ]
+    },
+
+    "restaurant-management-system": {
+        id: "restaurant-management-system",
+        title: "نظام إدارة المطعم",
+        category: "تطبيق سطح المكتب",
+        categories: ["desktop"],
+        summary: "تطبيق ويندوز متكامل لإدارة عمليات المطعم، يشمل الطلبات، التوصيل، المخزون، سير عمل المطبخ، والتقارير المالية القائمة على الشيفت.",
+        mainImage: "../css/images/restaurantSystem/1.jpeg",
+        githubLink: "#",
+        demoLink: "#",
+        date: "2026",
+        role: "مطور Full Stack",
+        duration: "سيتم التحديث",
+        team: "مشروع فردي",
+        overview: `
+            <p>نظام إدارة المطعم هو تطبيق سطح مكتب متكامل مبني بـ C# و WinForms، صُمِّم لتبسيط جميع جوانب تشغيل المطعم. من إدارة الطلبات وتذاكر المطبخ إلى تتبع التوصيل والتقارير المالية المرتبطة بالشيفت، يُوفِّر النظام مركزاً تشغيلياً متكاملاً للموظفين والإدارة.</p>
+            <p>يتميز التطبيق بواجهة مستخدم حديثة بنمط داكن بلوحة ألوان احترافية بدرجات الرمادي الأردوازي والأزرق، مما يُتيح تجربة سلسة للكاشير وعمال المطبخ والمديرين. ويدعم النظام معالجة الطلبات بشكل فوري، وحساب رسوم التوصيل، وإدارة الشيفتات بتفاصيل مالية دقيقة.</p>
+        `,
+        features: [
+            { icon: "fas fa-utensils", text: "إدارة كاملة للطلبات مع دعم الأكل في المطعم والتوصيل" },
+            { icon: "fas fa-motorcycle", text: "إدارة التوصيل مع تتبع الرسوم وتعيين السائقين" },
+            { icon: "fas fa-cash-register", text: "تقارير مالية مرتبطة بالشيفت وإدارة درج الكاشير" },
+            { icon: "fas fa-receipt", text: "طباعة تذاكر المطبخ مع تفاصيل الأصناف والإضافات" },
+            { icon: "fas fa-chart-bar", text: "لوحة تحكم بإحصائيات فورية وإجماليات يومية" },
+            { icon: "fas fa-boxes", text: "إدارة المخزون ومتابعة الكميات" },
+            { icon: "fas fa-users-cog", text: "صلاحيات مختلفة للكاشير وعمال المطبخ والمديرين" },
+            { icon: "fas fa-moon", text: "واجهة مستخدم داكنة حديثة بنظام تصميم احترافي" }
+        ],
+        techStack: [
+            { name: "C#", icon: "devicon-csharp-plain" },
+            { name: "WinForms", icon: "devicon-dotnetcore-plain" },
+            { name: ".NET", icon: "devicon-dot-net-plain" },
+            { name: "SQL Server", icon: "devicon-microsoftsqlserver-plain" },
+            { name: "Entity Framework", icon: "devicon-dot-net-plain" },
+            { name: "LINQ", icon: "fas fa-database" }
+        ],
+        codeSnippets: [],
+        gallery: [
+            { image: "../css/images/restaurantSystem/1.jpeg", caption: "لقطة شاشة ١" },
+            { image: "../css/images/restaurantSystem/2.jpeg", caption: "لقطة شاشة ٢" },
+            { image: "../css/images/restaurantSystem/3.jpeg", caption: "لقطة شاشة ٣" },
+            { image: "../css/images/restaurantSystem/4.jpeg", caption: "لقطة شاشة ٤" },
+            { image: "../css/images/restaurantSystem/5.jpeg", caption: "لقطة شاشة ٥" },
+            { image: "../css/images/restaurantSystem/6.jpeg", caption: "لقطة شاشة ٦" },
+            { image: "../css/images/restaurantSystem/7.jpeg", caption: "لقطة شاشة ٧" },
+            { image: "../css/images/restaurantSystem/8.jpeg", caption: "لقطة شاشة ٨" },
+            { image: "../css/images/restaurantSystem/9.jpeg", caption: "لقطة شاشة ٩" },
+            { image: "../css/images/restaurantSystem/10.jpeg", caption: "لقطة شاشة ١٠" },
+            { image: "../css/images/restaurantSystem/11.jpeg", caption: "لقطة شاشة ١١" },
+            { image: "../css/images/restaurantSystem/12.jpeg", caption: "لقطة شاشة ١٢" },
+            { image: "../css/images/restaurantSystem/13.jpeg", caption: "لقطة شاشة ١٣" },
+            { image: "../css/images/restaurantSystem/14.jpeg", caption: "لقطة شاشة ١٤" },
+            { image: "../css/images/restaurantSystem/15.jpeg", caption: "لقطة شاشة ١٥" },
+            { image: "../css/images/restaurantSystem/16.jpeg", caption: "لقطة شاشة ١٦" },
+            { image: "../css/images/restaurantSystem/17.jpeg", caption: "لقطة شاشة ١٧" },
+            { image: "../css/images/restaurantSystem/18.jpeg", caption: "لقطة شاشة ١٨" },
+            { image: "../css/images/restaurantSystem/19.jpeg", caption: "لقطة شاشة ١٩" },
+            { image: "../css/images/restaurantSystem/20.jpeg", caption: "لقطة شاشة ٢٠" },
+            { image: "../css/images/restaurantSystem/21.jpeg", caption: "لقطة شاشة ٢١" },
+            { image: "../css/images/restaurantSystem/22.jpeg", caption: "لقطة شاشة ٢٢" },
+            { image: "../css/images/restaurantSystem/23.jpeg", caption: "لقطة شاشة ٢٣" },
+            { image: "../css/images/restaurantSystem/24.jpeg", caption: "لقطة شاشة ٢٤" },
+            { image: "../css/images/restaurantSystem/25.jpeg", caption: "لقطة شاشة ٢٥" },
+            { image: "../css/images/restaurantSystem/26.jpeg", caption: "لقطة شاشة ٢٦" },
+            { image: "../css/images/restaurantSystem/27.jpeg", caption: "لقطة شاشة ٢٧" },
+            { image: "../css/images/restaurantSystem/28.jpeg", caption: "لقطة شاشة ٢٨" }
+        ],
+        challenges: [
+            {
+                challenge: "سيتم التحديث",
+                solution: "سيتم التحديث"
+            }
+        ],
+        links: [
+            { icon: "fab fa-github", text: "عرض الكود المصدري", url: "#" }
+        ]
     }
     
 };

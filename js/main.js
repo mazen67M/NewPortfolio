@@ -178,6 +178,16 @@ const sideProjectsData = [
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
         demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
         categories: ["desktop", "websites"]
+    },
+    {
+        id: "restaurant-management-system",
+        title: "نظام إدارة المطعم",
+        description: "تطبيق ويندوز متكامل لإدارة عمليات المطعم، يشمل الطلبات، التوصيل، المخزون، سير عمل المطبخ، والتقارير المالية القائمة على الشيفت.",
+        image: "./css/images/restaurantSystem/1.jpeg",
+        techStack: ["C#", "WinForms", ".NET", "SQL Server", "Entity Framework", "LINQ"],
+        githubLink: "#",
+        demoLink: "#",
+        categories: ["desktop"]
     }
 ];
 
