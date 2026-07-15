@@ -4,23 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Mazen Mohsen - Junior ASP.NET Core Developer portfolio. Experienced in building scalable web applications with C#, SQL Server, Entity Framework, and Clean Architecture.">
+        content="Mazen Mohsen — ASP.NET Core Developer specializing in backend web development, RESTful APIs, and Clean Architecture. Available for full-time roles and freelance projects in Cairo, Egypt.">
     <meta name="keywords"
-        content="ASP.NET Developer, C# Developer, Web Developer, Egypt, Cairo, Backend Developer, Junior Developer">
+        content="ASP.NET Developer, C# Developer, .NET Backend Developer, Cairo Egypt, Clean Architecture, Flutter Developer, REST API Developer">
     <meta name="author" content="Mazen Mohsen">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="canonical" href="https://portfoliomazen.vercel.app">
     
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mazen Mohsen - ASP.NET Developer Portfolio">
+    <meta property="og:url" content="https://portfoliomazen.vercel.app">
+    <meta property="og:title" content="Mazen Mohsen — ASP.NET Core Developer Portfolio">
     <meta property="og:description"
-        content="Junior ASP.NET Developer passionate about building scalable and secure web apps">
-    <meta property="og:image" content="./css/images/photo.jpg">
+        content="Building scalable, clean-architecture web applications and APIs with C#, ASP.NET Core, and SQL Server.">
+    <meta property="og:image" content="https://portfoliomazen.vercel.app/css/images/photo.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Mazen Mohsen - ASP.NET Developer">
-    <meta name="twitter:description" content="Junior ASP.NET Developer passionate about building scalable web apps">
+    <meta name="twitter:url" content="https://portfoliomazen.vercel.app">
+    <meta name="twitter:title" content="Mazen Mohsen — ASP.NET Core Developer">
+    <meta name="twitter:description"
+        content="Building scalable, clean-architecture web applications and APIs with C#, ASP.NET Core, and SQL Server.">
+    <meta name="twitter:image" content="https://portfoliomazen.vercel.app/css/images/photo.jpg">
+    
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Mazen Mohsen",
+                "jobTitle": "ASP.NET Core Developer",
+                "url": "https://portfoliomazen.vercel.app",
+                "email": "mazen.mohsen.dev@gmail.com",
+                "sameAs": [
+                    "https://github.com/mazen67m",
+                    "http://www.linkedin.com/in/mazen-mohsen-560823345"
+                ]
+            }
+            </script>
     <title>Mazen Mohsen | ASP.NET Core Developer Portfolio</title>
     <link rel="icon" type="image/png" href="./favicon.png">
     <link rel="stylesheet" href="css/styles.css">
@@ -46,17 +68,18 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">Portfolio</div>
+            <a href="#hero" class="logo">Mazen.dev</a>
             <ul class="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             <div class="resume-btn-container">
-                <a href="./css/CV Final.pdf" class="btn resume-btn">Resume</a>
+            <a href="./css/cv-mazen-mohsen.pdf" class="btn resume-btn">Resume</a>
             </div>
             <div class="hamburger">
                 <div class="bar"></div>
@@ -77,12 +100,16 @@
                 </div>
         <div class="hero-text">
             <h1 class="typing-text">Mazen Mohsen</h1>
-            <h2>ASP.NET Developer</h2>
-            <p class="tagline">Junior ASP.NET Developer passionate about building scalable and secure web apps using ASP.NET Core & SQL Server</p>
+            <h2>Backend Engineer · ASP.NET Core &amp; .NET</h2>
+            <div class="availability-badge">
+                <span class="avail-dot"></span>
+                <span>Available for freelance &amp; full-time</span>
+            </div>
+            <p class="tagline">Building scalable, clean-architecture web applications and APIs with C#, ASP.NET Core, and SQL
+                Server. Open to full-time roles and freelance contracts.</p>
             <div class="cta-buttons">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="./css/CV Final.pdf" class="btn secondary-btn">Download Resume</a>
-                <a href="#contact" class="btn primary-btn">Let's Build Something Together</a>
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
             </div>
             <a href="#about" class="scroll-indicator">
                 <div class="mouse-icon">
@@ -98,6 +125,14 @@
         <div id="particles-js" class="particles-container"></div> <!-- Background -->
 </section>
 
+<!-- Currently Building Banner -->
+<div class="currently-building-banner">
+    <div class="container">
+        <span class="pulse-dot"></span>
+        <strong>Currently Building:</strong> ARTifactify — AI-powered art identification app (Flutter + ASP.NET Core)
+        &middot; Graduation Project 2026
+    </div>
+</div>
 
 <!-- About Me Section -->
 <section id="about" class="section about-section">
@@ -153,42 +188,74 @@
                 <div class="skill-icon-card" data-skill="C#">
                     <i class="devicon-csharp-plain colored"></i>
                     <span>C#</span>
-                    <div class="skill-level" data-level="90"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">ARTifactify</span>
+                        <span class="project-tag">Book Verse</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="ASP.NET Core">
                     <i class="devicon-dotnetcore-plain colored"></i>
                     <span>ASP.NET Core</span>
-                    <div class="skill-level" data-level="85"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">ARTifactify</span>
+                        <span class="project-tag">Blog</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="SQL Server">
                     <i class="devicon-microsoftsqlserver-plain colored"></i>
                     <span>SQL Server</span>
-                    <div class="skill-level" data-level="80"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">SuperMarket</span>
+                        <span class="project-tag">Restaurant</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="Entity Framework">
                     <i class="devicon-dot-net-plain colored"></i>
                     <span>EF Core</span>
-                    <div class="skill-level" data-level="85"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">CozyCorner</span>
+                        <span class="project-tag">Book Verse</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="JavaScript">
                     <i class="devicon-javascript-plain colored"></i>
                     <span>JavaScript</span>
-                    <div class="skill-level" data-level="70"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">CozyCorner</span>
+                        <span class="project-tag">Blog</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="HTML5">
                     <i class="devicon-html5-plain colored"></i>
                     <span>HTML5</span>
-                    <div class="skill-level" data-level="85"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">CozyCorner</span>
+                        <span class="project-tag">Blog</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="CSS3">
                     <i class="devicon-css3-plain colored"></i>
                     <span>CSS3</span>
-                    <div class="skill-level" data-level="80"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">CozyCorner</span>
+                        <span class="project-tag">Blog</span>
+                    </div>
                 </div>
                 <div class="skill-icon-card" data-skill="Bootstrap">
                     <i class="devicon-bootstrap-plain colored"></i>
                     <span>Bootstrap</span>
-                    <div class="skill-level" data-level="85"></div>
+                    <div class="skill-projects">
+                        <span class="project-tag">E-Commerce</span>
+                        <span class="project-tag">CozyCorner</span>
+                        <span class="project-tag">SuperMarket</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,7 +361,8 @@
                 </p>
                 <span class="cert-date">2024</span>
                 <br>
-                <a href="#" class="cert-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                <span class="cert-status" style="font-size: 0.85rem; color: var(--text-muted); font-style: italic;">Certificate
+                    available upon request</span>
             </div>
 
             <div class="certification-card">
@@ -303,7 +371,7 @@
                 <p>Built custom web solutions including e-commerce platforms, blogs, and management systems</p>
                 <span class="cert-date">2023 - Present</span>
                 <br>
-                <a href="#" class="cert-link" target="_blank">View Projects <i class="fas fa-external-link-alt"></i></a>
+                <a href="#projects" class="cert-link">View Projects <i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
     </div>
@@ -346,6 +414,85 @@
   </div>
 </section>
        
+<!-- Services Section -->
+<section id="services" class="section services-section">
+    <div class="container">
+        <h2 class="section-title">What I Build</h2>
+        <p class="section-subtitle">Services I offer to clients &amp; companies</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-plug"></i></div>
+                <h3>REST API Development</h3>
+                <p>Secure, well-documented RESTful APIs built with ASP.NET Core Web API — including JWT auth, Swagger
+                    docs, and clean layered architecture.</p>
+                <ul class="service-tags">
+                    <span>ASP.NET Core</span><span>JWT</span><span>Swagger</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                <h3>Full-Stack Web Apps</h3>
+                <p>End-to-end web applications using ASP.NET Core MVC with SQL Server — from database schema to
+                    responsive UI.</p>
+                <ul class="service-tags">
+                    <span>ASP.NET MVC</span><span>SQL Server</span><span>Bootstrap</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3>Database Design &amp; Optimization</h3>
+                <p>Normalized schema design, Entity Framework Core migrations, Redis caching, and SQL query optimization
+                    for production performance.</p>
+                <ul class="service-tags">
+                    <span>SQL Server</span><span>EF Core</span><span>Redis</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Admin Dashboards &amp; Management Systems</h3>
+                <p>Custom admin panels, POS systems, and business management portals with role-based access control and
+                    real-time data.</p>
+                <ul class="service-tags">
+                    <span>RBAC</span><span>ASP.NET Identity</span><span>Charts</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Mobile Backend (API for Apps)</h3>
+                <p>Backend APIs powering Flutter or React Native apps — user auth, push notifications, file uploads, and
+                    structured JSON responses.</p>
+                <ul class="service-tags">
+                    <span>Web API</span><span>Flutter</span><span>Firebase</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h3>E-Commerce Platforms</h3>
+                <p>Full-featured e-commerce solutions with product catalogs, cart, checkout, payment integration, and
+                    admin inventory management.</p>
+                <ul class="service-tags">
+                    <span>Stripe</span><span>Clean Arch</span><span>MVC</span>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                <h3>Desktop App Development</h3>
+                <p>Windows desktop applications using C# WinForms connected to a backend API — ideal for POS, inventory,
+                    and offline-capable tools.</p>
+                <ul class="service-tags">
+                    <span>WinForms</span><span>C#</span><span>.NET</span>
+                </ul>
+            </div>
+        </div>
+
+        <div class="services-cta">
+            <p>Have a project in mind?</p>
+            <a href="#contact" class="btn primary-btn"><i class="fas fa-envelope"></i> Let's Talk</a>
+        </div>
+    </div>
+</section>
+
 <!-- Projects Section -->
 <section id="projects" class="section projects-section">
     <div class="container">
@@ -369,7 +516,41 @@
     </div>
 </section>
 
-
+<!-- Testimonials Section -->
+<section id="testimonials" class="section testimonials-section">
+    <div class="container">
+        <h2 class="section-title">What Others Say</h2>
+        <p class="section-subtitle">Recommendations & feedback</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Mazen is a highly motivated and skilled developer. During our training, he
+                    demonstrated excellent mastery of ASP.NET Core and SQL Server, always producing clean and structured
+                    code."</p>
+                <div class="testimonial-author">
+                    <!-- TODO: Update with your instructor's real name and photo/link when available -->
+                    <strong>DEPI Training Instructor</strong>
+                    <span>Digital Egypt Pioneers Initiative</span>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Working with Mazen on CozyCorner was a great experience. His expertise in
+                    backend architecture, repository patterns, and Redis caching was key to our project's success."</p>
+                <div class="testimonial-author">
+                    <strong>Arwa Alaa</strong>
+                    <span>Collaborator, CozyCorner Project</span>
+                </div>
+            </div>
+        </div>
+        <p class="testimonials-note" style="text-align: center; margin-top: 2rem;">
+            <a href="http://www.linkedin.com/in/mazen-mohsen-560823345" target="_blank"
+                style="color: var(--accent-light); text-decoration: none; font-weight: 500;">
+                View all recommendations on LinkedIn <i class="fas fa-external-link-alt"></i>
+            </a>
+        </p>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section id="contact" class="section contact-section">
@@ -392,7 +573,8 @@
                                 <i class="fas fa-phone"></i>
                                 <div>
                                     <h4>Phone</h4>
-                                    <p><a href="tel:+201276632422">+20 127 663 2422</a></p>                                </div>
+                                    <p><a href="tel:+201276632422">+20 127 663 2422</a></p>
+                                    </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -417,27 +599,78 @@
                                     <i class="fab fa-linkedin"></i>
                                     <span>LinkedIn</span>
                                 </a>
+                                <a href="https://wa.me/201276632422" target="_blank" class="social-link whatsapp-link" aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
                                 <a href="mailto:mazen.mohsen.dev@gmail.com" class="social-link" aria-label="Email">
                                     <i class="fas fa-envelope"></i>
                                     <span>Email</span>
                                 </a>
                             </div>
                         </div>
+
+                        <div class="contact-form-container">
+                            <h3>Send a Message</h3>
+                            <!-- Formspree form ID updated for production -->
+                            <form id="contact-form" action="https://formspree.io/f/xdaqnlvn" method="POST" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select id="subject" name="subject">
+                                        <option>Freelance Project Inquiry</option>
+                                        <option>Full-time Opportunity</option>
+                                        <option>Collaboration</option>
+                                        <option>General Question</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" required
+                                        placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                <button type="submit" class="btn primary-btn" id="submit-btn">
+                                    <i class="fas fa-paper-plane"></i> <span id="submit-label">Send Message</span>
+                                </button>
+                                <!-- Form feedback messages -->
+                                <div id="form-success" class="form-feedback form-success" style="display:none;">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div>
+                                        <strong>Message sent!</strong>
+                                        <p>Thanks for reaching out. I'll reply within 24 hours.</p>
+                                    </div>
+                                </div>
+                                <div id="form-error" class="form-feedback form-error" style="display:none;">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <div>
+                                        <strong>Oops, something went wrong.</strong>
+                                        <p>Please try emailing me directly at <a
+                                                href="mailto:mazen.mohsen.dev@gmail.com">mazen.mohsen.dev@gmail.com</a></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
                         
-                        <div class="map-container">
-                            <iframe 
+                        <div class="map-container-wrapper"
+                            style="margin-top: var(--spacing-md); height: 350px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-light);">
+                            <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55210.16050599455!2d31.2243006!3d30.0444196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458410d3edb5d59%3A0x9b3ed3f17be9d65!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1694956000000!5m2!1sen!2seg"
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        </div>
+                        </div>
         </section>
     </main>
 
@@ -461,5 +694,57 @@
     <script src="js/cursor.js"></script>
     <script src="js/scrollReveal.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // AJAX contact form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const btn = document.getElementById('submit-btn');
+                const label = document.getElementById('submit-label');
+                const successEl = document.getElementById('form-success');
+                const errorEl = document.getElementById('form-error');
+
+                // Loading state
+                btn.disabled = true;
+                label.textContent = 'Sending...';
+                successEl.style.display = 'none';
+                errorEl.style.display = 'none';
+
+                const data = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        contactForm.reset();
+                        successEl.style.display = 'flex';
+                    } else {
+                        const errBody = await response.json().catch(() => ({}));
+                        console.error('Formspree response error:', errBody);
+                        errorEl.style.display = 'flex';
+                    }
+                } catch (err) {
+                    console.error('Formspree network error:', err);
+                    errorEl.style.display = 'flex';
+                } finally {
+                    btn.disabled = false;
+                    label.textContent = 'Send Message';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

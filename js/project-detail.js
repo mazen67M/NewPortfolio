@@ -157,6 +157,22 @@ function populateProjectPage(project) {
         challengesContainer.closest('.content-block').style.display = 'none';
     }
 
+    // Lessons Learned
+    const lessonsContainer = document.getElementById('project-lessons');
+    const lessonsSection = document.getElementById('lessons-section');
+    if (project.lessonsLearned && project.lessonsLearned.length > 0) {
+        lessonsContainer.innerHTML = project.lessonsLearned.map(item => `
+            <li style="display: flex; align-items: flex-start; margin-bottom: 12px; font-size: 1rem; line-height: 1.5;">
+                <i class="fas fa-check-circle" style="color: #20c997; margin-right: 12px; margin-top: 5px; font-size: 1.1rem; flex-shrink: 0;"></i>
+                <span>${item}</span>
+            </li>
+        `).join('');
+    } else {
+        if (lessonsSection) {
+            lessonsSection.style.display = 'none';
+        }
+    }
+
     // Quick links
     const quickLinksContainer = document.getElementById('project-links');
     if (project.links && project.links.length > 0) {

@@ -89,36 +89,24 @@ document.addEventListener('DOMContentLoaded', function() {
     animateOnScroll(); // Run once on page load
 });
 
-// Sample project data - This would typically come from a CMS or API
-const projectsData = [
-    {
-        title: "E-Commerce Platform",
-        description: "Full-featured ASP.NET Core MVC web app with Clean Architecture principles, payment integration, and admin dashboard.",
-        image: "./css/images/1.png",
-        techStack: ["ASP.NET Core", "Entity Framework", "SQL Server", "Azure", "React"],
-        githubLink: "#",
-        demoLink: "#"
-    },
-    {
-        title: "Healthcare Management System",
-        description: "A comprehensive healthcare management application with patient records and appointment scheduling.",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["ASP.NET Core", "Entity Framework", "SQL Server", "Identity Server", "Bootstrap"],
-        githubLink: "#",
-        demoLink: "#"
-    },
-    {
-        title: "Real Estate Listing Platform",
-        description: "A property listing and search platform with advanced filtering and user accounts.",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["ASP.NET Core", "MongoDB", "Docker", "AWS", "Vue.js"],
-        githubLink: "#",
-        demoLink: "#"
-    }
-];
+// projectsData is no longer used directly — all real projects are in sideProjectsData below
+const projectsData = [];
 
 
 const sideProjectsData = [
+    {
+        id: "ARTifactify",
+        title: "ARTifactify",
+        description: "AI-powered mobile application identifying artworks and cultural artifacts from scanned photos. Graduation project built with Flutter & ASP.NET Core API.",
+        image: "./css/images/ARTifactify/home.png",
+        techStack: ["Flutter", "Dart", "ASP.NET Core Web API", "SQL Server", "Clean Architecture", "Gemini Vision AI"],
+        githubLink: "https://github.com/mazen67M/ARTifactify",
+        // TODO: Replace with live demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
+        categories: ["websites", "apis"],
+        featured: true
+    },
     {
         id: "e-commerce-platform",
         title: "E-Commerce Platform",
@@ -126,7 +114,9 @@ const sideProjectsData = [
         image: "./css/images/Ecommerce/Home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis"],
         githubLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
-        demoLink: "https://github.com/mazen67M/E-Commerce-App-With-Recommendation",
+        // TODO: Replace with live demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
         categories: ["websites", "other"]
     },
     {
@@ -136,17 +126,21 @@ const sideProjectsData = [
         image: "./css/images/Blog/home.jpeg",
         techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "ASP.NET Identity", "Bootstrap"],
         githubLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
-        demoLink: "https://github.com/mazen67M/BlogProjectDotNET-9",
+        // TODO: Replace with live demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
         categories: ["websites"]
     },
     {
         id: "book-verse",
         title: "Book Verse",
         description: "Library management system built with ASP.NET Core & SQL Server, supporting CRUD operations, user roles, and book reviewing system.",
-        image: "./css/images/3.png",
-        techStack: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server", "LINQ","ASP.NET WEB API", "JWT", "Google SMTP"],
+        image: "./css/images/BookVerse/swagger-overview.png",
+        techStack: ["ASP.NET Core", "C#", "Entity Framework", "SQL Server", "LINQ", "ASP.NET WEB API", "JWT", "Google SMTP"],
         githubLink: "https://github.com/mazen67M/LibraryManagement-system-API",
-        demoLink: "https://github.com/mazen67M/LibraryManagement-system-API",
+        // TODO: Replace with live Swagger/demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
         categories: ["apis"]
     },
     {
@@ -154,72 +148,43 @@ const sideProjectsData = [
         title: "CozyCorner",
         description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
         image: "./css/images/CozyCorner/Home.jpg",
-        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
+        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis", "ASP.NET WEB API"],
         githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        // TODO: Replace with live demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
         categories: ["websites"]
     },
-     {
-        id: "ARTifactify",
-        title: "ARTifactify",
-        description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
-        image: "./css/images/CozyCorner/Home.jpg",
-        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
-        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        categories: ["websites"]
-    },
-     {
+    {
         id: "SuperMarketSystem",
-        title: "SuperMarketSystem",
-        description: "Furniture e-commerce website using ASP.NET Core MVC + Bootstrap, supporting cart, wishlist, and admin product management.",
-        image: "./css/images/CozyCorner/Home.jpg",
-        techStack: ["ASP.NET Core MVC", "C#", "Entity Framework", "SQL Server", "Clean Architecture", "Bootstrap", "JavaScript", "Redis","ASP.NET WEB API"],
-        githubLink: "https://github.com/ArwaAlaa1/CozyCorners",
-        demoLink: "https://github.com/ArwaAlaa1/CozyCorners",
+        title: "SuperMarket System",
+        description: "Desktop Point of Sale (POS) and inventory system synchronized with an administrative ASP.NET Core web dashboard.",
+        image: "./css/images/SuperMarket/pos.png",
+        techStack: ["C#", "WinForms", "ASP.NET Core API", "SQL Server", "Entity Framework Core", "Bootstrap 5"],
+        githubLink: "https://github.com/mazen67M/SuperMarketSystem",
+        // TODO: Replace with live demo URL once deployed
+        demoLink: null,
+        demoAvailable: false,
         categories: ["desktop", "websites"]
     },
     {
         id: "restaurant-management-system",
-        title: "نظام إدارة المطعم",
-        description: "تطبيق ويندوز متكامل لإدارة عمليات المطعم، يشمل الطلبات، التوصيل، المخزون، سير عمل المطبخ، والتقارير المالية القائمة على الشيفت.",
+        // English title only for international audience
+        title: "Restaurant Management System",
+        description: "A complete Windows desktop app for restaurant operations management — built for an Arabic-speaking market. Covers orders, delivery, inventory, kitchen workflow, and shift-based financial reports.",
         image: "./css/images/restaurantSystem/1.jpeg",
-        techStack: ["C#", "WinForms", ".NET", "SQL Server", "Entity Framework", "LINQ"],
-        githubLink: "#",
-        demoLink: "#",
+        techStack: ["C#", "WinForms", ".NET Framework", "SQL Server", "Entity Framework", "LINQ"],
+        // Private repository
+        githubLink: null,
+        demoLink: null,
+        demoAvailable: false,
+        isPrivate: true,
         categories: ["desktop"]
     }
 ];
 
-const labsData = [
-    {
-        title: "Authentication Demo",
-        description: "A demonstration of different authentication methods in ASP.NET Core.",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["ASP.NET Core", "Identity", "JWT", "OAuth"],
-        githubLink: "#",
-        demoLink: "#",
-        categories: ["other"]
-    },
-    {
-        title: "Microservices Example",
-        description: "A simple microservices architecture example with service communication.",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["ASP.NET Core", "Docker", "RabbitMQ", "gRPC"],
-        githubLink: "#",
-        demoLink: "#",
-        categories: ["apis"]
-    },
-    {
-        title: "GraphQL API",
-        description: "An example GraphQL API implementation with ASP.NET Core.",
-        image: "https://via.placeholder.com/600x400",
-        techStack: ["ASP.NET Core", "GraphQL", "Entity Framework"],
-        githubLink: "#",
-        demoLink: "#",
-        categories: ["apis"]
-    }
-];
+// labsData removed — placeholder entries deleted. Add real lab projects here when ready.
+const labsData = [];
 
 // Function to create project cards
 function createProjectCard(project) {
@@ -227,14 +192,37 @@ function createProjectCard(project) {
     const detailsLink = hasDetailPage ? `./projects/index.html?id=${project.id}` : project.githubLink;
     
     const categoriesStr = project.categories ? project.categories.join(' ') : 'other';
+    const featuredClass = project.featured ? 'featured-project' : '';
+    const featuredBadge = project.featured ? '<span class="featured-badge">⭐ Featured Project</span>' : '';
+
+    // Demo button: null = coming soon, false = coming soon, string = live link
+    const demoBtn = (!project.demoLink || project.demoAvailable === false)
+        ? `<span class="project-link demo-link coming-soon" title="Live demo coming soon" onclick="event.stopPropagation()">
+               <i class="fas fa-clock"></i> Demo Soon
+           </span>`
+        : `<a href="${project.demoLink}" class="project-link demo-link" target="_blank" onclick="event.stopPropagation()">
+               <i class="fas fa-external-link-alt"></i> Live Demo
+           </a>`;
+
+    // GitHub button: null + isPrivate = private badge, null = hidden, string = link
+    const githubBtn = project.githubLink
+        ? `<a href="${project.githubLink}" class="project-link github-link" target="_blank" onclick="event.stopPropagation()">
+               <i class="fab fa-github"></i> GitHub
+           </a>`
+        : project.isPrivate
+            ? `<span class="project-link private-link" title="Private repository — available upon request" onclick="event.stopPropagation()">
+                   <i class="fas fa-lock"></i> Private Repo
+               </span>`
+            : '';
 
     return `
-        <div class="project-card project-item" data-categories="${categoriesStr}" ${hasDetailPage ? `onclick="window.location.href='${detailsLink}'"` : ''}>
+        <div class="project-card project-item ${featuredClass}" data-categories="${categoriesStr}" ${hasDetailPage ? `onclick="window.location.href='${detailsLink}'"` : ''}>
             <div class="project-categories-overlay">
                 ${project.categories ? project.categories.map(cat => `<span class="cat-tag">${cat.charAt(0).toUpperCase() + cat.slice(1)}</span>`).join('') : ''}
             </div>
             <img src="${project.image}" alt="${project.title}" class="project-image">
             <div class="project-content">
+                ${featuredBadge}
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="tech-stack">
@@ -242,12 +230,8 @@ function createProjectCard(project) {
                     ${project.techStack.length > 4 ? `<span class="tech-tag more-tag">+${project.techStack.length - 4} more</span>` : ''}
                 </div>
                 <div class="project-links">
-                    <a href="${project.githubLink}" class="project-link github-link" target="_blank" onclick="event.stopPropagation()">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="${project.demoLink}" class="project-link demo-link" target="_blank" onclick="event.stopPropagation()">
-                        <i class="fas fa-external-link-alt"></i> Demo
-                    </a>
+                    ${githubBtn}
+                    ${demoBtn}
                     ${hasDetailPage ? `
                         <a href="${detailsLink}" class="project-link details-link" onclick="event.stopPropagation()">
                             <i class="fas fa-arrow-right"></i> Details
