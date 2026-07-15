@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Production build
+build/
+dist/
+
+# Vercel
+.vercel
+
+# Environment variables
+.env*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Raw assets / backups
+BT-Images-Portfolio/
+
+# Project documentation / planning
+deep-search.md
+projects.md
+
