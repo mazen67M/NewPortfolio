@@ -1,0 +1,167 @@
+/* ==========================================================================
+   PAGES.CSS — Responsive utility classes for page-level layouts
+   Used by: about, contact, services, work pages
+   ========================================================================== */
+
+/* ── About page: photo + intro grid ── */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--sp-12);
+  align-items: flex-start;
+  margin-bottom: var(--sp-20);
+}
+
+.about-photo-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  flex-shrink: 0;
+}
+
+/* ── About page: credentials section ── */
+.about-credentials {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.about-cert-image {
+  position: relative;
+  width: 260px;
+  height: 184px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+/* ── Contact page: two-column layout ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+/* ── Services page: service card inner grid ── */
+.service-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-12);
+  align-items: start;
+}
+
+/* ── Work page: project list item ── */
+.work-list-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--sp-8);
+  padding: var(--sp-8) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.work-list-item:hover h2 {
+  color: var(--accent-bright);
+}
+
+.work-list-item:hover svg {
+  color: var(--accent);
+  transform: translateX(4px);
+  transition: transform 200ms ease;
+}
+
+.work-list-item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  flex-shrink: 0;
+}
+
+.work-list-year {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Hover states (moved from inline style tag) */
+.work-list-item:hover h2 {
+  color: var(--accent-bright);
+}
+
+.work-list-item:hover svg {
+  color: var(--accent);
+  transform: translateX(4px);
+  transition: transform 200ms ease;
+}
+
+/* ==========================================================================
+   RESPONSIVE OVERRIDES
+   ========================================================================== */
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .service-card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+}
+
+/* ── Large mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-8);
+  }
+
+  .about-photo-wrapper {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+}
+
+/* ── Small mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .about-cert-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .work-list-item {
+    gap: var(--sp-4);
+    padding: var(--sp-6) 0;
+  }
+
+  .work-list-year {
+    display: none;
+  }
+
+  .work-list-item-right {
+    gap: var(--sp-2);
+  }
+}
+
+/* ── Minimum (≤ 375px) ── */
+@media (max-width: 375px) {
+  .about-credentials {
+    flex-direction: column;
+  }
+
+  .about-cert-image {
+    width: 100%;
+  }
+}

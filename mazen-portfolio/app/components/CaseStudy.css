@@ -1,0 +1,400 @@
+/* ==========================================================================
+   CASE STUDY PAGE STYLES
+   ========================================================================== */
+
+.case-study-hero {
+  padding-top: 120px;
+  padding-bottom: var(--sp-16);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.case-study-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: var(--sp-10);
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.case-study-back:hover { color: var(--text-secondary); }
+.case-study-back svg  { width: 16px; height: 16px; }
+
+.case-study-title {
+  font-size: clamp(var(--text-4xl), 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  color: var(--text-primary);
+  margin-bottom: var(--sp-6);
+  max-width: 18ch;
+}
+
+.case-study-hook {
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 60ch;
+  margin-bottom: var(--sp-8);
+}
+
+.case-study-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-8);
+  flex-wrap: wrap;
+  padding: var(--sp-6) 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.case-study-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.case-study-meta-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.case-study-meta-value {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.meta-live-link {
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.meta-live-link:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent-bright) !important;
+  text-shadow: 0 0 10px rgba(186, 230, 253, 0.4);
+}
+
+.case-study-hero-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  margin-top: var(--sp-12);
+}
+
+/* ── Body Content ── */
+.case-study-body {
+  padding: var(--sp-16) var(--sp-6);
+}
+
+/* Page-level body wrapper — adds safe horizontal padding on mobile */
+.case-study-body--page {
+  width: 100%;
+  padding-left: max(var(--sp-5), env(safe-area-inset-left));
+  padding-right: max(var(--sp-5), env(safe-area-inset-right));
+}
+
+.case-study-body h2 {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-top: var(--sp-16);
+  margin-bottom: var(--sp-4);
+}
+
+.case-study-body h3 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: var(--sp-10);
+  margin-bottom: var(--sp-3);
+}
+
+.case-study-body p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--sp-4);
+}
+
+.case-study-body ul {
+  padding-left: var(--sp-6);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: var(--text-base);
+}
+
+.case-study-body ul li { margin-bottom: var(--sp-2); }
+
+/* ── Metrics Cards ── */
+.case-study-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  margin: var(--sp-8) 0;
+}
+
+.case-study-metric-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.case-study-metric-value {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent-bright);
+  line-height: 1;
+}
+
+.case-study-metric-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ── Gallery ── */
+.case-study-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+  margin: var(--sp-8) 0;
+}
+
+.case-study-gallery img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  object-fit: cover;
+}
+
+/* ── Bottom CTA ── */
+.case-study-cta {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-10) var(--sp-8);
+  text-align: center;
+  margin-top: var(--sp-16);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-study-cta::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+}
+
+.case-study-cta-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--sp-3);
+}
+
+.case-study-cta-sub {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--sp-6);
+}
+
+.case-study-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ── */
+
+/* ─ Tablet (≤ 900px) ─ */
+@media (max-width: 900px) {
+  .case-study-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ─ Large mobile (≤ 768px) ─ */
+@media (max-width: 768px) {
+  .case-study-hero {
+    padding-top: 100px;
+    padding-bottom: var(--sp-10);
+  }
+
+  .case-study-hero-image { height: 260px; }
+
+  .case-study-gallery { grid-template-columns: 1fr; }
+
+  .case-study-body {
+    padding: var(--sp-8) var(--sp-5);
+  }
+
+  .case-study-body h2 {
+    font-size: var(--text-xl);
+    margin-top: var(--sp-10);
+  }
+
+  .case-study-metric-card {
+    padding: var(--sp-4) var(--sp-5);
+  }
+
+  .case-study-metric-value {
+    font-size: var(--text-2xl);
+  }
+
+  .case-study-cta-title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ─ Small mobile (≤ 480px) ─ */
+@media (max-width: 480px) {
+  .case-study-hero {
+    padding-top: 90px;
+    padding-bottom: var(--sp-8);
+  }
+
+  .case-study-title {
+    font-size: clamp(var(--text-2xl), 8vw, var(--text-4xl));
+    max-width: 100%;
+  }
+
+  .case-study-hook {
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  .case-study-hero-image { height: 200px; }
+
+  /* Meta bar: wrap tightly into a 2-column grid */
+  .case-study-meta-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4) var(--sp-6);
+    padding: var(--sp-5) 0;
+  }
+
+  /* Metrics: 2-col compact cards instead of 1-col tall cards */
+  .case-study-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+    margin: var(--sp-5) 0;
+  }
+
+  .case-study-metric-card {
+    padding: var(--sp-4);
+  }
+
+  .case-study-metric-value {
+    font-size: var(--text-xl);
+    letter-spacing: -0.02em;
+  }
+
+  .case-study-metric-label {
+    font-size: 10px;
+  }
+
+  /* Body: tighter */
+  .case-study-body {
+    padding: var(--sp-6) var(--sp-4);
+  }
+
+  .case-study-body h2 {
+    font-size: var(--text-lg);
+    margin-top: var(--sp-8);
+    margin-bottom: var(--sp-3);
+  }
+
+  .case-study-body p {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+
+  /* Gallery: single col */
+  .case-study-gallery {
+    grid-template-columns: 1fr;
+    gap: var(--sp-3);
+  }
+
+  /* Code block: don't overflow container */
+  .case-study-body pre {
+    font-size: 11px;
+    padding: 1rem;
+    word-break: break-word;
+  }
+
+  /* Links CTA */
+  .case-study-cta {
+    padding: var(--sp-6) var(--sp-4);
+    margin-top: var(--sp-10);
+  }
+
+  .case-study-cta-title {
+    font-size: var(--text-lg);
+  }
+
+  .case-study-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .case-study-links .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Back link */
+  .case-study-back {
+    margin-bottom: var(--sp-6);
+    font-size: var(--text-xs);
+  }
+}
+
+/* ─ Minimum (≤ 375px) ─ */
+@media (max-width: 375px) {
+  .case-study-title {
+    font-size: var(--text-2xl);
+  }
+
+  .case-study-hero-image { height: 170px; }
+
+  .case-study-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-2);
+  }
+
+  .case-study-metric-card {
+    padding: var(--sp-3);
+  }
+
+  .case-study-metric-value {
+    font-size: var(--text-lg);
+  }
+
+  .case-study-body {
+    padding: var(--sp-5) var(--sp-3);
+  }
+
+  .case-study-meta-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+  }
+}
