@@ -789,6 +789,226 @@ public async Task<CheckoutResult> ProcessCheckoutAsync(List<CartItem> items, int
         ]
     },
 
+    "cv-screener": {
+        id: "cv-screener",
+        title: "CV Screener",
+        category: "AI-Powered SaaS Platform",
+        categories: ["websites", "apis"],
+        summary: "An AI-powered platform that matches a candidate CV against a Job Description using a hybrid scoring engine — combining TF-IDF semantic vectors, a curated Skills Taxonomy, and Experience Rules to produce an explainable match score, skill gap analysis, and a personalized learning path.",
+        mainImage: "../css/images/CVScreener/untitled-08-18-2026_05_23_PM.png",
+        githubLink: "#",
+        demoLink: "https://cvscreener1.vercel.app/",
+        date: "2026",
+        role: "Solo Developer (Full-Stack + ML)",
+        duration: "Active Development",
+        team: "Solo Project",
+        overview: `
+            <p>CV Screener is a production-grade SaaS platform built to solve a precise problem: how well does a specific CV match a specific job description — and exactly why? Instead of a black-box score, it surfaces a transparent three-dimensional breakdown: text semantic similarity, skills taxonomy coverage, and experience level alignment.</p>
+
+            <h4>🎯 The Problem</h4>
+            <p>Job seekers send CVs blindly and never know why they're rejected. Recruiters process hundreds of applications manually with no objective ranking mechanism. CV Screener gives both sides an explainable, data-backed compatibility score — not just a number, but a full breakdown of what matched, what partially matched, what's missing, and a personalized curriculum to close the gap.</p>
+
+            <h4>🧠 The Hybrid Scoring Engine</h4>
+            <p>The core innovation is a three-component weighted formula:</p>
+            <ul>
+                <li><strong>Text Similarity (50%):</strong> A TF-IDF model trained on ~9.4 MB of real job descriptions, exported to ONNX and run inside .NET 8 — no Python in production. Cosine similarity between CV and JD vectors.</li>
+                <li><strong>Skills Score (35%):</strong> A curated taxonomy of 50 canonical skills with alias mapping (e.g., ".NET → ASP.NET Core, ASP.NET") classifies each skill as Matched, Partial, or Missing.</li>
+                <li><strong>Experience Score (15%):</strong> Regex year extraction with seniority keyword fallback and a continuous ratio formula — not tiered, so partial experience still contributes.</li>
+            </ul>
+
+            <h4>🏗 Architecture</h4>
+            <ul>
+                <li><strong>Backend:</strong> .NET 8 Web API with strict Clean Architecture — Core → Infrastructure → API. Zero external NuGet packages in Core. All services registered via DI in Program.cs.</li>
+                <li><strong>Frontend:</strong> Next.js 14 (App Router), TypeScript, Tailwind CSS, Clerk authentication. All API calls routed through a typed Axios lib layer.</li>
+                <li><strong>Database:</strong> PostgreSQL via Supabase with raw Npgsql SQL — intentionally no ORM. RLS enabled for row-level security.</li>
+                <li><strong>ML Pipeline:</strong> Python scikit-learn TF-IDF → ONNX export via skl2onnx → Microsoft.ML.OnnxRuntime inference in .NET as a Singleton service.</li>
+                <li><strong>Infrastructure:</strong> Vercel (frontend), Railway (backend), Supabase (DB), Clerk (auth + JWT).</li>
+            </ul>
+
+            <h4>📊 By the Numbers</h4>
+            <ul>
+                <li>8 frontend pages (landing, onboarding, analysis/new, results, dashboard, history, share, auth)</li>
+                <li>7 backend controllers, 6 Core interfaces, 9 services, 5 repositories</li>
+                <li>50 canonical skills in the taxonomy with alias expansion</li>
+                <li>9.4 MB training corpus → 166 KB ONNX model (5000-word vocabulary)</li>
+                <li>Score labels computed server-side: Poor / Below Average / Average / Good / Excellent</li>
+            </ul>
+        `,
+        features: [
+            { icon: "fas fa-brain", text: "Hybrid AI scoring: TF-IDF semantic similarity + Skills Taxonomy + Experience rules" },
+            { icon: "fas fa-file-upload", text: "PDF CV upload with PdfPig text extraction — file never stored, only extracted text persists" },
+            { icon: "fas fa-check-double", text: "Three-tier skill classification: Matched / Partial / Missing against a curated 50-skill taxonomy" },
+            { icon: "fas fa-graduation-cap", text: "Personalized learning path for every missing skill — targeted resources to close identified gaps" },
+            { icon: "fas fa-share-alt", text: "Public share links via UUID — no auth required to view a shared analysis report" },
+            { icon: "fas fa-history", text: "Analysis history (last 50 per user) with score progression and comparison" },
+            { icon: "fas fa-chart-bar", text: "User dashboard with aggregate metrics: total analyses, average score, best score achieved" },
+            { icon: "fas fa-user-lock", text: "Role-based onboarding (Job Seeker / Recruiter) with Clerk JWT authentication — role is permanent once set" },
+            { icon: "fas fa-cogs", text: "ONNX ML inference running inside .NET as a Singleton — no Python in production" },
+            { icon: "fas fa-layer-group", text: "Strict Clean Architecture with Core having zero external NuGet dependencies" }
+        ],
+        techStack: [
+            { name: ".NET 8 Web API", icon: "devicon-dotnetcore-plain" },
+            { name: "C#", icon: "devicon-csharp-plain" },
+            { name: "Next.js 14", icon: "devicon-nextjs-plain" },
+            { name: "TypeScript", icon: "devicon-typescript-plain" },
+            { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+            { name: "Python (ML Training)", icon: "devicon-python-plain" },
+            { name: "scikit-learn / ONNX", icon: "fas fa-robot" },
+            { name: "Clerk Auth", icon: "fas fa-user-shield" },
+            { name: "Supabase", icon: "devicon-supabase-plain" },
+            { name: "Clean Architecture", icon: "fas fa-layer-group" },
+            { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+            { name: "Vercel + Railway", icon: "fas fa-cloud" }
+        ],
+        codeSnippets: [
+            {
+                title: "Hybrid Scoring Orchestration — MatchingService",
+                language: "csharp",
+                code: `// MatchingService orchestrates all three engines and persists the result.
+// Weights are fixed per DEC-003 and must not be changed without explicit approval.
+public async Task<AnalysisResult> AnalyzeAsync(string cvText, string jdText, Guid userId)
+{
+    var cleanedCv = TextCleaner.Clean(cvText);
+    var cleanedJd = TextCleaner.Clean(jdText);
+
+    // Run all three engines — order doesn't matter; they're independent
+    var textSimilarity = await _tfIdfService.ComputeSimilarityAsync(cleanedCv, cleanedJd);
+    var skillsResult   = _skillsEngine.Evaluate(cleanedCv, cleanedJd);
+    var expResult      = _experienceEngine.Evaluate(cleanedCv, cleanedJd);
+
+    // Fixed hybrid formula: Text 50% + Skills 35% + Experience 15%
+    var overallScore = (int)Math.Round(
+        (0.50 * textSimilarity +
+         0.35 * skillsResult.Score +
+         0.15 * expResult.Score) * 100
+    );
+
+    var result = new AnalysisResult
+    {
+        UserId           = userId,
+        OverallScore     = overallScore,
+        ScoreLabel       = ScoreLabel.FromScore(overallScore),  // Server-side — DEC-018
+        TextSimilarity   = textSimilarity,
+        SkillsScore      = skillsResult.Score,
+        ExperienceScore  = expResult.Score,
+        MatchedSkills    = skillsResult.Matched,
+        PartialSkills    = skillsResult.Partial,
+        MissingSkills    = skillsResult.Missing,
+        ExperienceData   = expResult,
+        AnalysisVersion  = "v2"   // Hybrid scoring — v3 will be Transformer-based
+    };
+
+    await _analysisRepository.SaveAsync(result);
+    return result;
+}`
+            },
+            {
+                title: "ONNX TF-IDF Inference — Singleton Service",
+                language: "csharp",
+                code: `// OnnxInferenceService loads the model ONCE at startup (Singleton lifetime).
+// InferenceSession is thread-safe; no locking needed on VectorizeAsync.
+public class OnnxInferenceService : IOnnxInferenceService
+{
+    private readonly InferenceSession _session;
+
+    public OnnxInferenceService(IOptions<MlOptions> options)
+    {
+        var modelPath = PathResolver.Resolve(options.Value.ModelPath);
+        _session = new InferenceSession(modelPath);
+    }
+
+    public Task<float[]> VectorizeAsync(string text)
+    {
+        // ONNX input: string tensor shape [1,1]
+        var inputTensor = new DenseTensor<string>(new[] { text }, new[] { 1, 1 });
+        var inputs = new List<NamedOnnxValue>
+        {
+            NamedOnnxValue.CreateFromTensor("input", inputTensor)
+        };
+
+        using var results = _session.Run(inputs);
+        // Output: float[5000] — 5000-word vocabulary TF-IDF vector
+        var vector = results.First().AsEnumerable<float>().ToArray();
+        return Task.FromResult(vector);
+    }
+}`
+            },
+            {
+                title: "Skills Taxonomy Engine — Matched / Partial / Missing Classification",
+                language: "csharp",
+                code: `// SkillsEngine loads skills_taxonomy.json once (Singleton).
+// Each canonical skill has an array of known aliases for alias-match detection.
+public SkillsResult Evaluate(string cvText, string jdText)
+{
+    var requiredSkills = ExtractSkills(jdText);
+    var matched = new List<string>();
+    var partial  = new List<string>();
+    var missing  = new List<string>();
+
+    foreach (var skill in requiredSkills)
+    {
+        if (HasCanonicalMatch(cvText, skill))
+            matched.Add(skill.Canonical);
+        else if (HasAliasMatch(cvText, skill))
+            partial.Add(skill.Canonical);   // Alias match — counts as 0.5
+        else
+            missing.Add(skill.Canonical);
+    }
+
+    // Score = (Matched + 0.5 × Partial) / TotalRequired
+    var score = requiredSkills.Count == 0 ? 1.0 :
+        (matched.Count + 0.5 * partial.Count) / requiredSkills.Count;
+
+    return new SkillsResult
+    {
+        Matched = matched.ToArray(),
+        Partial = partial.ToArray(),
+        Missing = missing.ToArray(),
+        Score   = Math.Min(score, 1.0)
+    };
+}`
+            }
+        ],
+        gallery: [
+            { image: "../css/images/CVScreener/untitled-08-18-2026_05_23_PM.png", caption: "Landing Page — Hero with Live Compatibility Scan Preview" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_25_PM.png", caption: "How It Works — 5-Step AI Intelligence Pipeline" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_27_PM.png", caption: "User Dashboard — Analysis Metrics & Recent Analyses" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_28_PM.png", caption: "New Analysis Page — CV Upload & Job Description Input" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_30_PM.png", caption: "Results Page — Overall Score & Dimensional Score Breakdown" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_31_PM.png", caption: "Results — Skills Breakdown: Matched, Partial & Missing Skills" },
+            { image: "../css/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_3_PM.png", caption: "Results — Recommended Learning Path & Experience Alignment" }
+        ],
+        challenges: [
+            {
+                challenge: "Running a Python-trained ML model inside a .NET production environment without Python runtime dependencies",
+                solution: "Trained a TF-IDF model with scikit-learn, exported it to ONNX format using skl2onnx, then loaded it inside .NET via Microsoft.ML.OnnxRuntime as a Singleton service. The InferenceSession is thread-safe, so the model loads once at startup and serves all concurrent requests with no Python involved."
+            },
+            {
+                challenge: "Designing a scoring formula that is explainable and resistant to single-dimension gaming",
+                solution: "Implemented a fixed three-component weighted hybrid score (Text 50% + Skills 35% + Experience 15%). Each dimension is surfaced separately in the UI so users understand exactly which dimension is dragging their score down — preventing CV 'keyword stuffing' from inflating the text similarity score alone."
+            },
+            {
+                challenge: "Skill matching that handles terminology variance (e.g., '.NET' vs 'ASP.NET Core' vs 'dotnet')",
+                solution: "Built a curated Skills Taxonomy JSON with 50 canonical skills, each with a list of known aliases. The SkillsEngine performs canonical matching first, then alias matching (counted as a partial at 0.5 weight) — ensuring skill coverage is accurate across the wide variation in how technologies are named in CVs vs. job descriptions."
+            },
+            {
+                challenge: "PDF text extraction that gracefully handles scanned, encrypted, or corrupted files",
+                solution: "Implemented typed domain exceptions (ScannedPdfException, EncryptedPdfException, CorruptedPdfException) inside PdfPig-based extraction. Each maps to an HTTP 422 Unprocessable Entity with a user-friendly error message — the CV is never stored, only extracted text flows through the system (DEC-005)."
+            }
+        ],
+        lessonsLearned: [
+            "ONNX is the right bridge between Python ML training and .NET production inference — training stays in Python's rich ecosystem while inference stays in the type-safe, dependency-free .NET runtime.",
+            "A curated taxonomy beats raw keyword matching: aliases for canonical skills dramatically reduce false negatives where a skill is present but named differently.",
+            "Explainability is a feature, not an afterthought — surfacing each scoring dimension separately makes the product trustworthy and actionable rather than a black box.",
+            "Clean Architecture's payoff is most visible at integration points: swapping the ONNX model version required changing only OnnxInferenceService, with zero changes to MatchingService, controllers, or DTOs.",
+            "Clerk's JWT validation in .NET requires ValidateAudience = false because Clerk does not include an 'aud' claim by default — a non-obvious integration detail that only surfaced during deployment testing."
+        ],
+        links: [
+            { icon: "fas fa-external-link-alt", text: "Live Demo", url: "https://cvscreener1.vercel.app/" },
+            { icon: "fab fa-github", text: "Source Code (Private)", url: "#" }
+        ]
+    },
+
     "restaurant-management-system": {
         id: "restaurant-management-system",
         title: "Restaurant Management System — نظام إدارة المطعم",

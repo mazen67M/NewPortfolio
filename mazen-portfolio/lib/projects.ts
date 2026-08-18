@@ -46,7 +46,151 @@ export type Project = {
 
 export const projects: Project[] = [
   // ─────────────────────────────────────────────────────────
-  // 1. SAMARA STUDIO MANAGEMENT SYSTEM
+  // 1. CV SCREENER — AI-Powered SaaS Platform (FLAGSHIP)
+  // ─────────────────────────────────────────────────────────
+  {
+    id: 'cv-screener',
+    slug: 'cv-screener',
+    title: 'CV Screener',
+    hook: 'Not just a score — an explainable three-dimensional breakdown of why your CV fits (or doesn\'t) a job.',
+    description:
+      'An AI-powered SaaS platform that matches a candidate CV against a Job Description using a hybrid scoring engine — TF-IDF semantic vectors, a curated 50-skill taxonomy, and experience rules — deployed on a .NET 8 + Next.js 14 + PostgreSQL stack with ONNX inference running fully in .NET.',
+    category: 'Full Stack · AI · SaaS',
+    year: '2026',
+    role: 'Solo Developer (Full-Stack + ML)',
+    duration: 'Active Development',
+    team: 'Solo',
+    status: 'live',
+    image: '/images/CVScreener/untitled-08-18-2026_05_23_PM.png',
+    heroImage: '/images/CVScreener/untitled-08-18-2026_05_23_PM.png',
+    isFlagship: true,
+    bentoSize: 'flagship',
+    techStack: [
+      '.NET 8 Web API',
+      'C#',
+      'Next.js 14',
+      'TypeScript',
+      'PostgreSQL',
+      'Supabase',
+      'Clerk Auth',
+      'Python (ML Training)',
+      'scikit-learn',
+      'ONNX Runtime',
+      'Tailwind CSS',
+      'Vercel + Railway',
+    ],
+    links: {
+      demo: 'https://cvscreener1.vercel.app/',
+    },
+    features: [
+      'Hybrid AI scoring: TF-IDF semantic similarity (50%) + Skills Taxonomy (35%) + Experience rules (15%) — three-dimensional, not a black box',
+      'PDF CV upload with PdfPig text extraction — file never stored, only extracted text persists (privacy by design)',
+      'Three-tier skill classification: Matched / Partial / Missing against a curated 50-canonical-skill taxonomy with alias expansion',
+      'Personalized learning path generated for every missing skill — targeted Doc/Course resources to close identified gaps',
+      'Public share links via UUID — no auth required to view a shared analysis report',
+      'Analysis history (last 50 per user) with score progression tracking',
+      'User dashboard with aggregate metrics: total analyses, average score, best score achieved',
+      'Role-based onboarding (Job Seeker / Recruiter) with Clerk JWT authentication',
+      'ONNX ML inference running inside .NET as a Singleton — no Python runtime in production',
+      'Strict Clean Architecture: Core → Infrastructure → API, with zero external NuGet packages in Core',
+    ],
+    metrics: [
+      { value: '50',     label: 'Canonical Skills in Taxonomy' },
+      { value: '166 KB', label: 'ONNX Model (from 9.4 MB corpus)' },
+      { value: '3',      label: 'Scoring Dimensions' },
+      { value: '8',      label: 'Frontend Pages' },
+    ],
+    gallery: [
+      { src: '/images/CVScreener/untitled-08-18-2026_05_23_PM.png',                                       alt: 'Landing Page — Hero with Live Compatibility Scan Preview' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_25_PM.png',   alt: 'How It Works — 5-Step AI Intelligence Pipeline' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_27_PM.png',   alt: 'User Dashboard — Analysis Metrics & Recent Analyses' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_28_PM.png',   alt: 'New Analysis — CV Upload & Job Description Input' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_30_PM.png',   alt: 'Results — Overall Score & Dimensional Score Breakdown' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_31_PM.png',   alt: 'Results — Skills Breakdown: Matched, Partial & Missing' },
+      { src: '/images/CVScreener/CV-Screener-—-AI-Powered-Resume-Intelligence-08-18-2026_05_3_PM.png',    alt: 'Results — Recommended Learning Path & Experience Alignment' },
+    ],
+    caseStudy: {
+      problem:
+        'Job seekers send CVs blindly and never know why they\'re rejected. Recruiters process hundreds of applications manually with no objective ranking. Existing ATS tools give a score but no explanation — candidates can\'t act on "68%". CV Screener was built to surface exactly which dimension is dragging the score down and give users a concrete next step to fix it.',
+      solution:
+        'A fixed three-component weighted hybrid score: Text Similarity via a TF-IDF model (trained on 9.4 MB of real job descriptions, exported to ONNX, inferred in .NET — no Python in production); Skills Score via a curated taxonomy of 50 canonical skills with alias mapping; Experience Score via regex year extraction with a continuous ratio formula. Every result shows all three scores separately, a Matched/Partial/Missing skill breakdown, and a personalized learning path for every gap.',
+      architecture: [
+        'Backend: .NET 8 Web API with strict Clean Architecture — Core → Infrastructure → API. Zero external NuGet packages in Core. DI registered entirely in Program.cs.',
+        'Frontend: Next.js 14 (App Router), TypeScript, Tailwind CSS, Clerk authentication. All API calls routed through a typed Axios lib layer.',
+        'Database: PostgreSQL via Supabase with raw Npgsql SQL — intentionally no ORM. RLS enabled for row-level security.',
+        'ML Pipeline: Python scikit-learn TF-IDF trained on 9.4 MB corpus → skl2onnx ONNX export (166 KB, 5000-word vocabulary) → Microsoft.ML.OnnxRuntime Singleton inference in .NET.',
+        'Infrastructure: Vercel (frontend), Railway (backend .NET API), Supabase (PostgreSQL), Clerk (JWT auth + user management).',
+        'Score labels (Poor / Below Average / Average / Good / Excellent) computed server-side to prevent client-side manipulation.',
+      ],
+      challenges: [
+        {
+          challenge: 'Running a Python-trained ML model inside a .NET production environment without a Python runtime dependency',
+          solution:
+            'Trained a TF-IDF model with scikit-learn, exported it to ONNX format via skl2onnx, then loaded it inside .NET via Microsoft.ML.OnnxRuntime as a Singleton service. InferenceSession is thread-safe — the model loads once at startup and serves all concurrent requests with zero Python involved.',
+        },
+        {
+          challenge: 'Skill matching that handles terminology variance — ".NET" vs "ASP.NET Core" vs "dotnet"',
+          solution:
+            'Built a curated Skills Taxonomy JSON with 50 canonical skills, each with a list of known aliases. The SkillsEngine performs canonical matching first, then alias matching (counted as partial at 0.5 weight) — ensuring skill coverage is accurate across the wide variation in how technologies are named in CVs vs. job descriptions.',
+        },
+        {
+          challenge: 'Designing a scoring formula that is explainable and resistant to single-dimension gaming (CV keyword stuffing)',
+          solution:
+            'Implemented a fixed three-component weighted formula (50/35/15). Each dimension is surfaced separately in the UI — users can see exactly which score is dragging them down, and a candidate who keyword-stuffs their CV will see high Text Similarity but low Skills/Experience scores, exposing the manipulation.',
+        },
+      ],
+      lessonsLearned: [
+        'ONNX is the right bridge between Python ML training and .NET production inference — training stays in Python\'s rich ecosystem while inference stays in a type-safe, dependency-free runtime.',
+        'A curated taxonomy beats raw keyword matching: alias expansion dramatically reduces false negatives where a skill is present but named differently.',
+        'Explainability is a feature, not an afterthought — surfacing each dimension separately makes the product trustworthy and actionable, not a black box.',
+        'Clean Architecture\'s payoff is most visible at integration points: swapping the ONNX model version required changing only OnnxInferenceService, with zero changes to MatchingService, controllers, or DTOs.',
+      ],
+      codeSnippet: {
+        title: 'Hybrid Scoring Orchestration — MatchingService',
+        language: 'csharp',
+        code: `// MatchingService orchestrates all three engines and persists the result.
+// Weights are fixed: Text 50% + Skills 35% + Experience 15%
+public async Task<AnalysisResult> AnalyzeAsync(string cvText, string jdText, Guid userId)
+{
+    var cleanedCv = TextCleaner.Clean(cvText);
+    var cleanedJd = TextCleaner.Clean(jdText);
+
+    // Three independent engines — run in any order
+    var textSimilarity = await _tfIdfService.ComputeSimilarityAsync(cleanedCv, cleanedJd);
+    var skillsResult   = _skillsEngine.Evaluate(cleanedCv, cleanedJd);
+    var expResult      = _experienceEngine.Evaluate(cleanedCv, cleanedJd);
+
+    // Fixed hybrid formula — prevents single-dimension gaming
+    var overallScore = (int)Math.Round(
+        (0.50 * textSimilarity +
+         0.35 * skillsResult.Score +
+         0.15 * expResult.Score) * 100
+    );
+
+    var result = new AnalysisResult
+    {
+        UserId          = userId,
+        OverallScore    = overallScore,
+        ScoreLabel      = ScoreLabel.FromScore(overallScore), // Server-side always
+        TextSimilarity  = textSimilarity,
+        SkillsScore     = skillsResult.Score,
+        ExperienceScore = expResult.Score,
+        MatchedSkills   = skillsResult.Matched,
+        PartialSkills   = skillsResult.Partial,
+        MissingSkills   = skillsResult.Missing,
+        ExperienceData  = expResult,
+        AnalysisVersion = "v2"
+    };
+
+    await _analysisRepository.SaveAsync(result);
+    return result;
+}`,
+      },
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────
+  // 2. SAMARA STUDIO MANAGEMENT SYSTEM
   // ─────────────────────────────────────────────────────────
   {
     id: 'samara-studio',
@@ -63,8 +207,7 @@ export const projects: Project[] = [
     status: 'in-development',
     image: '/images/Samara-Studio-Portfolio/Samara-Dashboard.png',
     heroImage: '/images/Samara-Studio-Portfolio/Samara-Dashboard.png',
-    isFlagship: true,
-    bentoSize: 'flagship',
+    bentoSize: 'secondary',
     isPrivate: true,
     techStack: [
       'Next.js 16',
